@@ -917,7 +917,7 @@ public:
 
     // Fel-scarred
     action_t* burning_blades = nullptr;
-    action_t* demonsurge = nullptr;
+    action_t* demonsurge     = nullptr;
   } active;
 
   // Pets
@@ -3752,7 +3752,6 @@ struct metamorphosis_t : public demon_hunter_spell_t
     }
     else  // DEMON_HUNTER_VENGEANCE
     {
-
       for ( demonsurge_ability ability : demonsurge_vengeance_abilities )
       {
         p()->buff.demonsurge_abilities[ ability ]->trigger();
@@ -4464,7 +4463,8 @@ struct preemptive_strike_t : public demon_hunter_spell_t
 
 struct demonsurge_t : public demon_hunter_spell_t
 {
-  demonsurge_t( util::string_view name, demon_hunter_t* p ) : demon_hunter_spell_t( name, p, p->hero_spec.demonsurge_damage )
+  demonsurge_t( util::string_view name, demon_hunter_t* p )
+    : demon_hunter_spell_t( name, p, p->hero_spec.demonsurge_damage )
   {
     background = dual = true;
   }
@@ -5951,19 +5951,20 @@ struct soul_cleave_t : public demon_hunter_attack_t
 
   heals::soul_cleave_heal_t* heal;
 
-  soul_cleave_t( demon_hunter_t* p, util::string_view options_str )
-    : demon_hunter_attack_t( "soul_cleave", p, p->spec.soul_cleave, options_str ), heal( nullptr )
+  soul_cleave_t( util::string_view name, demon_hunter_t* p, util::string_view options_str, bool demonsurge = false )
+    : demon_hunter_attack_t( name, p, demonsurge ? p->hero_spec.soul_sunder : p->spec.soul_cleave, options_str ),
+      heal( nullptr )
   {
     may_miss = may_dodge = may_parry = may_block = false;
     attack_power_mod.direct = 0;  // This parent action deals no damage, parsed data is for the heal
 
-    execute_action =
-        p->get_background_action<soul_cleave_damage_t>( "soul_cleave_damage", data().effectN( 2 ).trigger() );
+    execute_action        = p->get_background_action<soul_cleave_damage_t>( fmt::format( "{}_damage", name ),
+                                                                            data().effectN( 2 ).trigger() );
     execute_action->stats = stats;
 
     if ( p->spec.soul_cleave_2->ok() )
     {
-      heal = p->get_background_action<heals::soul_cleave_heal_t>( "soul_cleave_heal" );
+      heal = p->get_background_action<heals::soul_cleave_heal_t>( fmt::format( "{}_heal", name ) );
     }
 
     if ( p->talent.vengeance.void_reaver->ok() && !p->active.frailty_heal )
@@ -6014,6 +6015,21 @@ struct soul_cleave_t : public demon_hunter_attack_t
     }
 
     p()->trigger_demonsurge( demonsurge_ability::SOUL_SUNDER );
+  }
+
+  bool ready() override
+  {
+    // if it's the soul sunder ID, we need to check if the right buff is up first.
+    if ( data().id() == p()->hero_spec.soul_sunder->id() && !p()->buff.demonsurge_demonic->up() )
+    {
+      return false;
+    }
+    if ( data().id() == p()->spec.soul_cleave->id() && p()->buff.demonsurge_demonic->up() )
+    {
+      return false;
+    }
+
+    return demon_hunter_attack_t::ready();
   }
 };
 
@@ -7134,7 +7150,9 @@ action_t* demon_hunter_t::create_action( util::string_view name, util::string_vi
   if ( name == "shear" )
     return new shear_t( this, options_str );
   if ( name == "soul_cleave" )
-    return new soul_cleave_t( this, options_str );
+    return new soul_cleave_t( "soul_cleave", this, options_str );
+  if ( name == "soul_sunder" )
+    return new soul_cleave_t( "soul_sunder", this, options_str, true );
   if ( name == "throw_glaive" )
     return new throw_glaive_t( "throw_glaive", this, options_str );
   if ( name == "vengeful_retreat" )
@@ -7310,9 +7328,9 @@ void demon_hunter_t::create_buffs()
     buff.demonsurge_abilities[ ability ] = make_buff( this, demonsurge_ability_name( ability ), spell_data_t::nil() );
   }
 
-  buff.demonsurge_demonic = make_buff( this, "demonsurge_demonic", hero_spec.demonsurge_demonic_buff );
+  buff.demonsurge_demonic  = make_buff( this, "demonsurge_demonic", hero_spec.demonsurge_demonic_buff );
   buff.demonsurge_hardcast = make_buff( this, "demonsurge_hardcast", hero_spec.demonsurge_hardcast_buff );
-  buff.demonsurge = make_buff( this, "demonsurge", hero_spec.demonsurge_stacking_buff );
+  buff.demonsurge          = make_buff( this, "demonsurge", hero_spec.demonsurge_stacking_buff );
 
   // Set Bonus Items ========================================================
 
@@ -8199,17 +8217,23 @@ void demon_hunter_t::init_spells()
       talent.felscarred.monster_rising->ok() ? find_spell( 452550 ) : spell_data_t::not_found();
   hero_spec.enduring_torment_buff =
       talent.felscarred.enduring_torment->ok() ? find_spell( 453314 ) : spell_data_t::not_found();
-  hero_spec.demonsurge_demonic_buff = talent.felscarred.demonsurge->ok() ? find_spell( 452435 ) : spell_data_t::not_found();
-  hero_spec.demonsurge_hardcast_buff = talent.felscarred.demonic_intensity->ok() ? find_spell( 452489 ) : spell_data_t::not_found();
+  hero_spec.demonsurge_demonic_buff =
+      talent.felscarred.demonsurge->ok() ? find_spell( 452435 ) : spell_data_t::not_found();
+  hero_spec.demonsurge_hardcast_buff =
+      talent.felscarred.demonic_intensity->ok() ? find_spell( 452489 ) : spell_data_t::not_found();
   hero_spec.demonsurge_damage = talent.felscarred.demonsurge->ok() ? find_spell( 452416 ) : spell_data_t::not_found();
-  hero_spec.demonsurge_stacking_buff = talent.felscarred.demonic_intensity->ok() ? find_spell( 452416 ) : spell_data_t::not_found();
+  hero_spec.demonsurge_stacking_buff =
+      talent.felscarred.demonic_intensity->ok() ? find_spell( 452416 ) : spell_data_t::not_found();
   hero_spec.demonsurge_trigger = talent.felscarred.demonsurge->ok() ? find_spell( 453323 ) : spell_data_t::not_found();
-  hero_spec.soul_sunder = talent.felscarred.demonsurge->ok() ? find_spell( 452436 ) : spell_data_t::not_found();
-  hero_spec.spirit_burst = talent.felscarred.demonsurge->ok() ? find_spell( 452437 ) : spell_data_t::not_found();
-  hero_spec.sigil_of_doom = talent.felscarred.demonic_intensity->ok() ? find_spell( 452490 ) : spell_data_t::not_found();
-  hero_spec.consuming_fire = talent.felscarred.demonic_intensity->ok() ? find_spell( 452487 ) : spell_data_t::not_found();
+  hero_spec.soul_sunder        = talent.felscarred.demonsurge->ok() ? find_spell( 452436 ) : spell_data_t::not_found();
+  hero_spec.spirit_burst       = talent.felscarred.demonsurge->ok() ? find_spell( 452437 ) : spell_data_t::not_found();
+  hero_spec.sigil_of_doom =
+      talent.felscarred.demonic_intensity->ok() ? find_spell( 452490 ) : spell_data_t::not_found();
+  hero_spec.consuming_fire =
+      talent.felscarred.demonic_intensity->ok() ? find_spell( 452487 ) : spell_data_t::not_found();
   hero_spec.abyssal_gaze = talent.felscarred.demonic_intensity->ok() ? find_spell( 452497 ) : spell_data_t::not_found();
-  hero_spec.fel_desolation = talent.felscarred.demonic_intensity->ok() ? find_spell( 452486 ) : spell_data_t::not_found();
+  hero_spec.fel_desolation =
+      talent.felscarred.demonic_intensity->ok() ? find_spell( 452486 ) : spell_data_t::not_found();
 
   // Sigil overrides for Precise/Concentrated Sigils
   std::vector<const spell_data_t*> sigil_overrides = { talent.demon_hunter.precise_sigils };
@@ -9346,11 +9370,15 @@ void demon_hunter_t::trigger_demonic()
 
 // demon_hunter_t::trigger_demonsurge =============================================
 
-void demon_hunter_t::trigger_demonsurge( demonsurge_ability ability ) {
-  if ( buff.demonsurge_abilities[ ability ]->up() ) {
+void demon_hunter_t::trigger_demonsurge( demonsurge_ability ability )
+{
+  if ( buff.demonsurge_abilities[ ability ]->up() )
+  {
     active.demonsurge->execute_on_target( target );
     buff.demonsurge_abilities[ ability ]->expire();
-    make_event<delayed_execute_event_t>( *sim, this, active.demonsurge, target, timespan_t::from_millis(hero_spec.demonsurge_trigger->effectN( 1 ).misc_value1()) );
+    make_event<delayed_execute_event_t>(
+        *sim, this, active.demonsurge, target,
+        timespan_t::from_millis( hero_spec.demonsurge_trigger->effectN( 1 ).misc_value1() ) );
   }
 }
 
