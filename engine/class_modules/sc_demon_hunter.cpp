@@ -3218,12 +3218,13 @@ struct sigil_of_flame_t : public demon_hunter_spell_t
 {
   sigil_of_flame_damage_t* sigil;
 
-  sigil_of_flame_t( demon_hunter_t* p, util::string_view options_str )
-    : demon_hunter_spell_t( "sigil_of_flame", p, p->spell.sigil_of_flame, options_str ), sigil( nullptr )
+  sigil_of_flame_t(
+      util::string_view name, demon_hunter_t* p, util::string_view options_str, bool demonsurge = false )
+    : demon_hunter_spell_t( name, p, demonsurge ? p->hero_spec.sigil_of_doom : p->spell.sigil_of_flame, options_str ), sigil( nullptr )
   {
     may_miss = false;
 
-    sigil        = p->get_background_action<sigil_of_flame_damage_t>( "sigil_of_flame_damage", ground_aoe_duration );
+    sigil        = p->get_background_action<sigil_of_flame_damage_t>( fmt::format("{}_damage", name), ground_aoe_duration );
     sigil->stats = stats;
 
     set_target( p );  // Can be self-cast for resources without a hostile target
@@ -3282,6 +3283,19 @@ struct sigil_of_flame_t : public demon_hunter_spell_t
   {
     // Spell data still has a Vengeance Demon Hunter class association but it's baseline
     return true;
+  }
+
+  bool ready() override
+  {
+    // if it's the sigil of doom ID, we need to check if the right buff is up first.
+    if ( data().id() == p()->hero_spec.sigil_of_doom->id() && !p()->buff.demonsurge_demonic->up() )
+      return false;
+
+    // if it's the sigil of flame ID, we need to check if the right buff is not up first.
+    if ( data().id() == p()->spell.sigil_of_flame->id() && p()->buff.demonsurge_demonic->up() )
+      return false;
+
+    return demon_hunter_spell_t::ready();
   }
 };
 
@@ -7115,7 +7129,9 @@ action_t* demon_hunter_t::create_action( util::string_view name, util::string_vi
   if ( name == "pick_up_fragment" )
     return new pick_up_fragment_t( this, options_str );
   if ( name == "sigil_of_flame" )
-    return new sigil_of_flame_t( this, options_str );
+    return new sigil_of_flame_t( "sigil_of_flame", this, options_str );
+  if ( name == "sigil_of_doom" )
+    return new sigil_of_flame_t( "sigil_of_doom", this, options_str, true );
   if ( name == "spirit_bomb" )
     return new spirit_bomb_t( "spirit_bomb", this, options_str );
   if ( name == "spirit_burst" )
