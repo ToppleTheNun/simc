@@ -4097,13 +4097,14 @@ struct spirit_bomb_t : public demon_hunter_spell_t
   spirit_bomb_damage_t* damage;
   unsigned max_fragments_consumed;
 
-  spirit_bomb_t( demon_hunter_t* p, util::string_view options_str )
-    : demon_hunter_spell_t( "spirit_bomb", p, p->talent.vengeance.spirit_bomb, options_str ),
+  spirit_bomb_t( util::string_view name, demon_hunter_t* p, util::string_view options_str, bool demonsurge = false )
+    : demon_hunter_spell_t( name, p, demonsurge ? p->hero_spec.spirit_burst : p->talent.vengeance.spirit_bomb,
+                            options_str ),
       max_fragments_consumed( static_cast<unsigned>( data().effectN( 2 ).base_value() ) )
   {
     may_miss = proc = callbacks = false;
 
-    damage        = p->get_background_action<spirit_bomb_damage_t>( "spirit_bomb_damage" );
+    damage        = p->get_background_action<spirit_bomb_damage_t>( fmt::format( "{}_damage", name ) );
     damage->stats = stats;
 
     if ( !p->active.frailty_heal )
@@ -4135,6 +4136,13 @@ struct spirit_bomb_t : public demon_hunter_spell_t
   bool ready() override
   {
     if ( p()->get_active_soul_fragments() < 1 )
+      return false;
+
+    // if it's the spirit burst ID, we need to check if the right buff is up first.
+    if ( data().id() == p()->hero_spec.spirit_burst->id() && !p()->buff.demonsurge_demonic->up() )
+      return false;
+    // if it's the spirit bomb ID, we need to check if the right buff is not up first.
+    if ( data().id() == p()->talent.vengeance.spirit_bomb->id() && p()->buff.demonsurge_demonic->up() )
       return false;
 
     return demon_hunter_spell_t::ready();
@@ -6021,13 +6029,11 @@ struct soul_cleave_t : public demon_hunter_attack_t
   {
     // if it's the soul sunder ID, we need to check if the right buff is up first.
     if ( data().id() == p()->hero_spec.soul_sunder->id() && !p()->buff.demonsurge_demonic->up() )
-    {
       return false;
-    }
+
+    // if it's the soul cleave ID, we need to check if the right buff is not up first.
     if ( data().id() == p()->spec.soul_cleave->id() && p()->buff.demonsurge_demonic->up() )
-    {
       return false;
-    }
 
     return demon_hunter_attack_t::ready();
   }
@@ -7111,7 +7117,9 @@ action_t* demon_hunter_t::create_action( util::string_view name, util::string_vi
   if ( name == "sigil_of_flame" )
     return new sigil_of_flame_t( this, options_str );
   if ( name == "spirit_bomb" )
-    return new spirit_bomb_t( this, options_str );
+    return new spirit_bomb_t( "spirit_bomb", this, options_str );
+  if ( name == "spirit_burst" )
+    return new spirit_bomb_t( "spirit_burst", this, options_str, true );
   if ( name == "elysian_decree" )
     return new elysian_decree_t( this, options_str );
   if ( name == "the_hunt" )
