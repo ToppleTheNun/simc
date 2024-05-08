@@ -710,6 +710,12 @@ public:
     const spell_data_t* demonsurge_damage;
     const spell_data_t* demonsurge_stacking_buff;
     const spell_data_t* demonsurge_trigger;
+    const spell_data_t* soul_sunder;
+    const spell_data_t* spirit_burst;
+    const spell_data_t* sigil_of_doom;
+    const spell_data_t* consuming_fire;
+    const spell_data_t* abyssal_gaze;
+    const spell_data_t* fel_desolation;
   } hero_spec;
 
   // Set Bonus effects
@@ -8198,6 +8204,12 @@ void demon_hunter_t::init_spells()
   hero_spec.demonsurge_damage = talent.felscarred.demonsurge->ok() ? find_spell( 452416 ) : spell_data_t::not_found();
   hero_spec.demonsurge_stacking_buff = talent.felscarred.demonic_intensity->ok() ? find_spell( 452416 ) : spell_data_t::not_found();
   hero_spec.demonsurge_trigger = talent.felscarred.demonsurge->ok() ? find_spell( 453323 ) : spell_data_t::not_found();
+  hero_spec.soul_sunder = talent.felscarred.demonsurge->ok() ? find_spell( 452436 ) : spell_data_t::not_found();
+  hero_spec.spirit_burst = talent.felscarred.demonsurge->ok() ? find_spell( 452437 ) : spell_data_t::not_found();
+  hero_spec.sigil_of_doom = talent.felscarred.demonic_intensity->ok() ? find_spell( 452490 ) : spell_data_t::not_found();
+  hero_spec.consuming_fire = talent.felscarred.demonic_intensity->ok() ? find_spell( 452487 ) : spell_data_t::not_found();
+  hero_spec.abyssal_gaze = talent.felscarred.demonic_intensity->ok() ? find_spell( 452497 ) : spell_data_t::not_found();
+  hero_spec.fel_desolation = talent.felscarred.demonic_intensity->ok() ? find_spell( 452486 ) : spell_data_t::not_found();
 
   // Sigil overrides for Precise/Concentrated Sigils
   std::vector<const spell_data_t*> sigil_overrides = { talent.demon_hunter.precise_sigils };
