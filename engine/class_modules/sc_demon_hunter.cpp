@@ -4517,6 +4517,18 @@ struct demonsurge_t : public demon_hunter_spell_t
     p()->buff.demonsurge->trigger();
     demon_hunter_spell_t::execute();
   }
+
+  double composite_da_multiplier( const action_state_t* s ) const override
+  {
+    double m = demon_hunter_spell_t::composite_da_multiplier( s );
+
+//    if ( s->chain_target == 0 && p()->talent.vengeance.focused_cleave->ok() )
+//    {
+//      m *= 1.0 + p()->talent.vengeance.focused_cleave->effectN( 1 ).percent();
+//    }
+
+    return m;
+  }
 };
 
 }  // end namespace spells
