@@ -44,6 +44,9 @@ export default defineConfig({
 					items: [{ autogenerate: { directory: 'appendixes' } }]
 				}
 			],
+			editLink: {
+				baseUrl: 'https://github.com/ToppleTheNun/simc/edit/static-docs/docs/'
+			}
 		}),
 	],
 });
