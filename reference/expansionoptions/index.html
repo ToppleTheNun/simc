@@ -1,0 +1,734 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-wy4c2mby"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Expansion Options | SimulationCraft</title><link rel="canonical" href="https://topplethenun.github.io/simc/reference/expansionoptions/"/><link rel="sitemap" href="/simc/sitemap-index.xml"/><link rel="shortcut icon" href="/simc/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v7.2.9"/><meta name="generator" content="Starlight v0.41.10"/><meta property="og:title" content="Expansion Options"/><meta property="og:type" content="article"/><meta property="og:url" content="https://topplethenun.github.io/simc/reference/expansionoptions/"/><meta property="og:locale" content="en"/><meta property="og:site_name" content="SimulationCraft"/><meta name="twitter:card" content="summary_large_image"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/simc/_astro/print.ehPL0gv-.css" media="print"><link rel="stylesheet" href="/simc/_astro/common.CR0JJupl.css"><script type="module" src="/simc/_astro/page.Dwipeu-R.js"></script></head><body class="astro-wy4c2mby"><a class="sl-skip-link astro-hnkoe7hg" href="#_top">Skip to content</a><div class="page sl-flex astro-hxzaxl2h"><header class="header astro-hxzaxl2h"><div class="header astro-e64bzlcb"><div class="title-wrapper sl-flex astro-e64bzlcb"><a href="/simc/" class="site-title sl-flex astro-iggt3new"><span class="astro-iggt3new" translate="no">SimulationCraft</span></a></div><div class="sl-flex print:hidden astro-e64bzlcb"><site-search class="astro-e64bzlcb astro-n5m6jpdh" data-translations="{&quot;placeholder&quot;:&quot;Search&quot;}"><button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-n5m6jpdh"><svg aria-hidden="true" class="astro-n5m6jpdh astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block astro-n5m6jpdh" aria-hidden="true">Search</span><kbd class="sl-hidden md:sl-flex astro-n5m6jpdh" style="display: none;"><kbd class="astro-n5m6jpdh">Ctrl</kbd><kbd class="astro-n5m6jpdh">K</kbd></kbd></button><dialog style="padding:0" aria-label="Search" class="astro-n5m6jpdh"><div class="dialog-frame sl-flex astro-n5m6jpdh"><button data-close-modal class="sl-flex md:sl-hidden astro-n5m6jpdh">Cancel</button><div class="search-container astro-n5m6jpdh"><div id="starlight__search" class="astro-n5m6jpdh"></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script><script type="module" src="/simc/_astro/Search.astro_astro_type_script_index_0_lang.BgEfGxOV.js"></script></div><div class="sl-hidden md:sl-flex print:hidden right-group astro-e64bzlcb"><div class="sl-flex social-icons astro-e64bzlcb"><a href="https://github.com/simulationcraft/simc" rel="me" class="sl-flex astro-gwnfudt3"><span class="sr-only astro-gwnfudt3">GitHub</span><svg aria-hidden="true" class="astro-gwnfudt3 astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-qvnrow5z"><span class="sr-only astro-qvnrow5z">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-qvnrow5z astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-qvnrow5z"><option value="dark" class="astro-qvnrow5z">Dark</option><option value="light" class="astro-qvnrow5z">Light</option><option value="auto" selected class="astro-qvnrow5z">Auto</option></select><svg aria-hidden="true" class="icon caret astro-qvnrow5z astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script><script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script><script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script></div></div></header><nav class="sidebar print:hidden astro-hxzaxl2h" aria-label="Main"><starlight-menu-button class="print:hidden astro-ehwglb7x"><button aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-ehwglb7x"><svg aria-hidden="true" class="open-menu astro-ehwglb7x astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg><svg aria-hidden="true" class="close-menu astro-ehwglb7x astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg></button></starlight-menu-button><script type="module">var e=class extends HTMLElement{btn=this.querySelector(`button`);constructor(){super(),this.btn.addEventListener(`click`,()=>this.toggleExpanded());let e=this.closest(`nav`);e&&e.addEventListener(`keyup`,e=>this.closeOnEscape(e)),matchMedia(`(min-width: 50em)`).addEventListener(`change`,()=>this.setExpanded(!1))}setExpanded(e){this.setAttribute(`aria-expanded`,String(e)),document.body.toggleAttribute(`data-mobile-menu-expanded`,e),document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}toggleExpanded(){this.setExpanded(this.getAttribute(`aria-expanded`)!==`true`)}closeOnEscape(e){e.code===`Escape`&&(this.setExpanded(!1),this.btn.focus())}};customElements.define(`starlight-menu-button`,e);</script><div id="starlight__sidebar" class="sidebar-pane astro-hxzaxl2h"><div class="sidebar-content sl-flex astro-hxzaxl2h"><sl-sidebar-state-persist data-hash="128pavv" class="astro-elzfs2db"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/" class="large astro-5wcgfqeq"><span class="astro-5wcgfqeq">Start Here</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/features" class="large astro-5wcgfqeq"><span class="astro-5wcgfqeq">Features</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/common-issues" class="large astro-5wcgfqeq"><span class="astro-5wcgfqeq">Common Issues</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/faq" class="large astro-5wcgfqeq"><span class="astro-5wcgfqeq">Frequently Asked Questions</span></a></li><li class="astro-5wcgfqeq"><details open class="astro-5wcgfqeq"><summary class="astro-5wcgfqeq"><span class="group-label astro-5wcgfqeq"><span class="large astro-5wcgfqeq">Classes</span></span><svg aria-hidden="true" class="caret astro-5wcgfqeq astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul class="astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/classes/deathknights/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Death Knights</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/demonhunters/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Demon Hunters</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/druids/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Druids</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/evokers/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Evokers</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/hunters/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Hunters</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/mages/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Mages</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/monks/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Monks</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/paladins/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Paladins</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/priests/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Priests</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/rogues/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Rogues</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/shaman/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Shaman</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/warlocks/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Warlocks</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/warriors/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Warriors</span></a></li></ul></details></li><li class="astro-5wcgfqeq"><details open class="astro-5wcgfqeq"><summary class="astro-5wcgfqeq"><span class="group-label astro-5wcgfqeq"><span class="large astro-5wcgfqeq">Textual Configuration Interface</span></span><svg aria-hidden="true" class="caret astro-5wcgfqeq astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul class="astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/reference/action-list-conditional-expressions/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Action List Conditional Expressions</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/actionlists/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Action Lists</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/battlearmoryapi/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Battle Armory API</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/buffsanddebuffs/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Buffs and Debuffs</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/characters/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Characters</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/enemies/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Enemies</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/equipment/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Equipment</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/examples/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Examples</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/expansionoptions/" aria-current="page" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Expansion Options</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/options/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Options</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/output/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Output</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/profileset/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Profile Set</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/raidevents/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Raid Events</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/spelldata/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Spell Data</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/spellquery/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Spell Query</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/statisticalbehaviour/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Statistical Behaviour</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/statsscaling/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Stats Scaling</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/targetoptions/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Target Options</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/textualconfigurationinterface/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Textual Configuration Interface</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/unique-gear-actions/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Unique Gear Actions</span></a></li></ul></details></li><li class="astro-5wcgfqeq"><details open class="astro-5wcgfqeq"><summary class="astro-5wcgfqeq"><span class="group-label astro-5wcgfqeq"><span class="large astro-5wcgfqeq">Developer Corner</span></span><svg aria-hidden="true" class="caret astro-5wcgfqeq astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="2"></sl-sidebar-restore><ul class="astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/development/coded_flags/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Coded Flags</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/codingguidelines/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Coding Guidelines</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/developersdocumentation/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Developers Documentation</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/gameclientdata/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Game Client Data</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/how-to-debug/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">How to Debug</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/howtobuild/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">How to Build</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/localization/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Localization</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/participate/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Participate</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/using-casc-extract-and-dbc-extract/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Using CASC Extract and DBC Extract</span></a></li></ul></details></li><li class="astro-5wcgfqeq"><details open class="astro-5wcgfqeq"><summary class="astro-5wcgfqeq"><span class="group-label astro-5wcgfqeq"><span class="large astro-5wcgfqeq">Appendixes</span></span><svg aria-hidden="true" class="caret astro-5wcgfqeq astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="3"></sl-sidebar-restore><ul class="astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/appendixes/cachecontrol/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Cache Control</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/fightingvariance/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Fighting Variance</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/formulationvssimulation/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Formulation vs Simulation</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/logos/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Logos</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/premedititatedprovocation/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Premeditated Provocation</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/simc_guisimc/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">simc_gui.simc</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/simcfortanks/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">simc for Tanks</span></a></li></ul></details></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex astro-3ha22r7x"><div class="social-icons astro-3ha22r7x"><a href="https://github.com/simulationcraft/simc" rel="me" class="sl-flex astro-gwnfudt3"><span class="sr-only astro-gwnfudt3">GitHub</span><svg aria-hidden="true" class="astro-gwnfudt3 astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-qvnrow5z"><span class="sr-only astro-qvnrow5z">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-qvnrow5z astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-qvnrow5z"><option value="dark" class="astro-qvnrow5z">Dark</option><option value="light" class="astro-qvnrow5z">Light</option><option value="auto" selected class="astro-qvnrow5z">Auto</option></select><svg aria-hidden="true" class="icon caret astro-qvnrow5z astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script></div></div></div></div></nav><div class="main-frame astro-hxzaxl2h"><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex astro-7fdbht2j"><aside class="right-sidebar-container print:hidden astro-7fdbht2j"><div class="right-sidebar astro-7fdbht2j"><div class="lg:sl-hidden astro-zrccc5ae"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-tqrbh7yd"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-tqrbh7yd"><details id="starlight__mobile-toc" class="astro-tqrbh7yd"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-tqrbh7yd"><span class="toggle sl-flex astro-tqrbh7yd">On this page<svg aria-hidden="true" class="caret astro-tqrbh7yd astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-tqrbh7yd"></span></summary><div class="dropdown astro-tqrbh7yd"><ul class="isMobile astro-hpfmcegt" style="--depth: 0;"><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#_top" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Overview</span></a></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#midnight" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Midnight</span></a></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#the-war-within" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">The War Within</span></a><ul class="isMobile astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#crafted-gear--embellishments" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Crafted Gear / Embellishments</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#consumables--enchants" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Consumables / Enchants</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#season-3-items" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Season 3 Items</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#season-2-items" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Season 2 Items</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#season-1-items" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Season 1 Items</span></a></li></ul></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#dragonflight" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Dragonflight</span></a><ul class="isMobile astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#trinkets" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Trinkets</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#consumables--enchants-1" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Consumables / Enchants</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#crafted-gear" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Crafted Gear</span></a></li></ul></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#shadowlands" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Shadowlands</span></a><ul class="isMobile astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#covenants" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Covenants</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#runeforge-legendaries" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Runeforge Legendaries</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#other-90-options" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Other 9.0 options</span></a></li></ul></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#battle-for-azeroth" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Battle for Azeroth</span></a><ul class="isMobile astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#azerite" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Azerite</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#azerite-power-and-item-specific-options" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Azerite-power and item specific options</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#azerite-essences" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Azerite Essences</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#corruption" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Corruption</span></a></li></ul></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#legion" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Legion</span></a><ul class="isMobile astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#items" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Items</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#miscellaneous" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Miscellaneous</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#pantheon-trinket-system" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Pantheon trinket system</span></a></li></ul></li></ul></div></details></nav></mobile-starlight-toc><script type="module" src="/simc/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.BcSo_yiZ.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-zrccc5ae"><div class="sl-container astro-zrccc5ae"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-hpfmcegt" style="--depth: 0;"><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#_top" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Overview</span></a></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#midnight" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Midnight</span></a></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#the-war-within" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">The War Within</span></a><ul class="astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#crafted-gear--embellishments" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Crafted Gear / Embellishments</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#consumables--enchants" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Consumables / Enchants</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#season-3-items" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Season 3 Items</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#season-2-items" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Season 2 Items</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#season-1-items" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Season 1 Items</span></a></li></ul></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#dragonflight" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Dragonflight</span></a><ul class="astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#trinkets" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Trinkets</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#consumables--enchants-1" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Consumables / Enchants</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#crafted-gear" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Crafted Gear</span></a></li></ul></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#shadowlands" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Shadowlands</span></a><ul class="astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#covenants" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Covenants</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#runeforge-legendaries" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Runeforge Legendaries</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#other-90-options" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Other 9.0 options</span></a></li></ul></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#battle-for-azeroth" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Battle for Azeroth</span></a><ul class="astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#azerite" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Azerite</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#azerite-power-and-item-specific-options" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Azerite-power and item specific options</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#azerite-essences" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Azerite Essences</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#corruption" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Corruption</span></a></li></ul></li><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#legion" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Legion</span></a><ul class="astro-hpfmcegt" style="--depth: 1;"><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#items" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Items</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#miscellaneous" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Miscellaneous</span></a></li><li style="--depth: 1;" class="astro-hpfmcegt"><a href="#pantheon-trinket-system" style="--depth: 1;" class="astro-hpfmcegt"><span style="--depth: 1;" class="astro-hpfmcegt">Pantheon trinket system</span></a></li></ul></li></ul></nav></starlight-toc><script type="module" src="/simc/_astro/TableOfContents.astro_astro_type_script_index_0_lang.Csloo1VZ.js"></script></div></div></div></aside><div class="main-pane astro-7fdbht2j"><main data-pagefind-body class="astro-wy4c2mby" lang="en" dir="ltr"><div class="content-panel astro-hhd3jgjl"><div class="sl-container astro-hhd3jgjl"><h1 id="_top" class="astro-dtr4knek">Expansion Options</h1></div></div><div class="content-panel astro-hhd3jgjl"><div class="sl-container astro-hhd3jgjl"><div class="sl-markdown-content"><div class="sl-heading-wrapper level-h1"><h1 id="expansion-specific-options">Expansion-specific options</h1><a class="sl-anchor-link" href="#expansion-specific-options"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Expansion-specific options”</span></a></div>
+<p>Note that expansion-specific options may disappear from Simulationcraft versions intended for newer expansions than what is defined here.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="midnight">Midnight</h2><a class="sl-anchor-link" href="#midnight"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Midnight”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Range</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>midnight.darkmoon_hunt_race</td>
+<td>raid_random</td>
+<td>raid_random, random, none, or a valid race string</td>
+<td>Controls the race used for Darkmoon Deck/Embellishment: Hunt stat buff selection. <code dir="auto">raid_random</code> picks a random race from current raid bosses each iteration. <code dir="auto">random</code> picks from all valid races. <code dir="auto">none</code> uses the target’s actual race. Valid race strings: aberration, beast, demon, dragonkin, elemental, giant, humanoid, mechanical, undead, not_specified. Dungeon Route fight style forces actual target race regardless of setting.</td>
+</tr>
+<tr>
+<td>midnight.sealed_chaos_urn_dispell</td>
+<td>0</td>
+<td>0 or 1</td>
+<td>Set to 1 if you expect a healer to dispel the Sealed Chaos Urn fear effect. When 0, the full fear duration is used.</td>
+</tr>
+<tr>
+<td>midnight.sealed_chaos_urn_dispell_time</td>
+<td>2.5</td>
+<td>0.5 - 5.0</td>
+<td>Average time (in seconds) after the Sealed Chaos Urn fear is applied before a healer dispels it. Only used when sealed_chaos_urn_dispell=1. Uses a gaussian distribution with 1s stddev, clamped to 0.5s - 4.5s.</td>
+</tr>
+<tr>
+<td>midnight.refueling_orb_heal_chance</td>
+<td>0.10</td>
+<td>0.0 - 1.0</td>
+<td>Chance that a Refueling Orb proc counts as healing instead of damage.</td>
+</tr>
+<tr>
+<td>midnight.crucible_of_erratic_energies_violence</td>
+<td>0</td>
+<td>0 or 1</td>
+<td>Enable the Violence protocol for Crucible of Erratic Energies. When enabled, the trinket procs at its full RPPM.</td>
+</tr>
+<tr>
+<td>midnight.crucible_of_erratic_energies_sustenance</td>
+<td>0</td>
+<td>0 or 1</td>
+<td>Enable the Sustenance protocol for Crucible of Erratic Energies. When enabled, the crit buff duration is doubled.</td>
+</tr>
+<tr>
+<td>midnight.crucible_of_erratic_energies_predation</td>
+<td>0</td>
+<td>0 or 1</td>
+<td>Enable the Predation protocol for Crucible of Erratic Energies. When enabled, the crit rating provided by the buff is increased.</td>
+</tr>
+<tr>
+<td>midnight.vessel_of_tortured_souls_miss_chance</td>
+<td>0.6</td>
+<td>0.0 - 1.0</td>
+<td>Chance that you will miss grabbing an orb that spawns.</td>
+</tr>
+<tr>
+<td>midnight.arcanoweave_trappings_uptime</td>
+<td>0.7</td>
+<td>0 - 1</td>
+<td>Percent uptime for arcanoweave trappings</td>
+</tr>
+<tr>
+<td>midnight.arcanoweave_trappings_update_interval</td>
+<td>10s</td>
+<td>1s - 9999s</td>
+<td>How often the sim will reroll if the buff is up or down</td>
+</tr>
+<tr>
+<td>midnight.arcanoweave_trappings_update_interval_stddev</td>
+<td>2.5s</td>
+<td>1s - 9999s</td>
+<td>Stddev of the update interval reroll</td>
+</tr>
+<tr>
+<td>midnight.lightspire_core_duration_multiplier</td>
+<td>0.5</td>
+<td>0.1 - 1.0</td>
+<td>Duration multiplier for the Light’s Blessing buff from Lightspire Core.</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h2"><h2 id="the-war-within">The War Within</h2><a class="sl-anchor-link" href="#the-war-within"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “The War Within”</span></a></div>
+<p>All options are player scoped unless otherwise noted.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="crafted-gear--embellishments">Crafted Gear / Embellishments</h3><a class="sl-anchor-link" href="#crafted-gear--embellishments"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Crafted Gear / Embellishments”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Range</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>thewarwithin.dawn_dusk_thread_lining_uptime</td>
+<td>0.6</td>
+<td>0 - 1</td>
+<td>Percent uptime for Dawn/Duskthread Lining</td>
+</tr>
+<tr>
+<td>thewarwithin.dawn_dusk_thread_lining_update_interval</td>
+<td>10s</td>
+<td>1s - 9999s</td>
+<td>How often the sim will reroll if the buff is up or down</td>
+</tr>
+<tr>
+<td>thewarwithin.dawn_dusk_thread_lining_update_interval_stddev</td>
+<td>2.5s</td>
+<td>1s - 9999s</td>
+<td>Stddev of the update interval reroll</td>
+</tr>
+<tr>
+<td>thewarwithin.embrace_of_the_cinderbee_timing</td>
+<td>0s</td>
+<td>100ms - 10s</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.embrace_of_the_cinderbee_miss_chance</td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Percent</td>
+</tr>
+<tr>
+<td>thewarwithin.binding_of_binding_on_you</td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Set to 1 if another player has bound to you</td>
+</tr>
+<tr>
+<td>thewarwithin.binding_of_binding_ally_trigger_chance</td>
+<td>0.8</td>
+<td>0 - 1</td>
+<td>Chance you will trigger the buff on an ally</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="consumables--enchants">Consumables / Enchants</h3><a class="sl-anchor-link" href="#consumables--enchants"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Consumables / Enchants”</span></a></div>
+<p>N/A</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="season-3-items">Season 3 Items</h3><a class="sl-anchor-link" href="#season-3-items"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Season 3 Items”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Range</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>thewarwithin.incorporeal_essence_gorger_ethereal</td>
+<td>0</td>
+<td>0 or 1</td>
+<td>Forces the target type to be Ethereal to force proc of highest secondary stat instead of lowest (default)</td>
+</tr>
+<tr>
+<td>thewarwithin.astral_antenna_miss_chance</td>
+<td>0</td>
+<td>0.0 - 1.0</td>
+<td>Chance to miss the astral antenna orb due to movement</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="season-2-items">Season 2 Items</h3><a class="sl-anchor-link" href="#season-2-items"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Season 2 Items”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Range</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>thewarwithin.mister_locknstalk_mode</td>
+<td>dynamic</td>
+<td>dynamic, single_target, aoe</td>
+<td>Dynamic used single_target for 1 target, aoe for 2+ targets</td>
+</tr>
+<tr>
+<td>thewarwithin.jastor_diamond_ally_stat</td>
+<td>none</td>
+<td>none, haste, mastery, critical_strike, versatility</td>
+<td><code dir="auto">none</code> will result in a random stat, can specify a single stat to reproduce a bug that existed during development</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="season-1-items">Season 1 Items</h3><a class="sl-anchor-link" href="#season-1-items"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Season 1 Items”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Range</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>thewarwithin.sikrans_endless_arsenal_stance</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.ovinaxs_mercurial_egg_initial_primary_stacks</td>
+<td>20</td>
+<td>0 - 30</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.ovinaxs_mercurial_egg_desired_primary_stacks</td>
+<td>20</td>
+<td>0 - 30</td>
+<td>Player is assumed to move while not casting to reach this value</td>
+</tr>
+<tr>
+<td>thewarwithin.entropic_skardyn_core_pickup_delay</td>
+<td>4s</td>
+<td>0s - 30s</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.entropic_skardyn_core_pickup_stddev</td>
+<td>1s</td>
+<td>0s - 30s</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.carved_blazikon_wax_enter_light_delay</td>
+<td>4s</td>
+<td>0s - 15s</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.carved_blazikon_wax_enter_light_stddev</td>
+<td>1s</td>
+<td>0s - 15s</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.carved_blazikon_wax_stay_in_light_duration</td>
+<td>0s</td>
+<td>0s - 15s</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.carved_blazikon_wax_stay_in_light_stddev</td>
+<td>0s</td>
+<td>0s - 15s</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.signet_of_the_priory_party_stats</td>
+<td></td>
+<td></td>
+<td>For example haste/haste/mastery/critical_strike</td>
+</tr>
+<tr>
+<td>thewarwithin.signet_of_the_priory_party_use_cooldown</td>
+<td>120s</td>
+<td>120s - 240s</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.signet_of_the_priory_party_use_stddev</td>
+<td>6s</td>
+<td>0s - 120s</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.harvesters_edict_intercept_chance</td>
+<td>0.2</td>
+<td>0 - 1</td>
+<td>Percent</td>
+</tr>
+<tr>
+<td>thewarwithin.nerubian_pheromone_secreter_pheromones</td>
+<td>1</td>
+<td>0 - 3</td>
+<td></td>
+</tr>
+<tr>
+<td>thewarwithin.concoction_kiss_of_death_buff_remaining_min</td>
+<td>1</td>
+<td>0 - 30</td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td>thewarwithin.concoction_kiss_of_death_buff_remaining_max</td>
+<td>2</td>
+<td>0 - 30</td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td>thewarwithin.fury_of_the_stormrook_pickup_delay</td>
+<td>3</td>
+<td>0 - 10</td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td>thewarwithin.fury_of_the_stormrook_pickup_stddev</td>
+<td>0.75</td>
+<td>0 - 1</td>
+<td>Percent</td>
+</tr>
+<tr>
+<td>thewarwithin.mereldars_toll_ally_trigger_chance</td>
+<td>0.7</td>
+<td>0 - 1</td>
+<td>Percent</td>
+</tr>
+<tr>
+<td>thewarwithin.sureki_zealots_insignia_rppm_multiplier</td>
+<td>0.9</td>
+<td>0 - 1</td>
+<td>Percent</td>
+</tr>
+<tr>
+<td>thewarwithin.windsingers_passive_stat</td>
+<td></td>
+<td>haste, mastery, critical_strike, versatility</td>
+<td>When empty, will use highest secondary stat on your gear at the start of the sim</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h2"><h2 id="dragonflight">Dragonflight</h2><a class="sl-anchor-link" href="#dragonflight"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Dragonflight”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="trinkets">Trinkets</h3><a class="sl-anchor-link" href="#trinkets"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Trinkets”</span></a></div>
+<ul>
+<li><strong>dragonflight.darkmoon_deck_watcher_deplete</strong> (scope: global, default: 2s) Average time before the Watcher’s Blessing shield from Darkmoon Deck: Watcher is depleted.</li>
+<li><strong>dragonflight.whispering_incarnate_icon_roles</strong> (scope: global, default: tank/heal/dps) <code dir="auto">/</code>-delimited string indicating which roles in your group also has a Whispering Incarnate Icon trinket.</li>
+<li><strong>dragonflight.primal_ritual_shell_blessing</strong> (scope: global, default: wind) Which blessing the trinket is set. Valid blessings are <code dir="auto">wind</code> <code dir="auto">flame</code></li>
+<li><strong>dragonflight.decoration_of_flame_miss_chance</strong> (scope: global, default: 0.05, min: 0.0, max: 1.0) Chance for Decoration of Flame’s AoE damage to miss a target.</li>
+<li><strong>dragonflight.alltotem_of_the_master_period</strong> (scope: global, default: 3s) Minimum time after Alltotem of the Master comes off cooldown that it will trigger again.</li>
+<li><strong>dragonflight.dragon_games_kicks</strong> (scope: global, default: 0) Number of balls spawned by Dragon Games Equipment the player will kick at the target.</li>
+<li><strong>dragonflight.dragon_games_rng</strong> (scope: global, default: 0.75, min: 0.0, max: 1.0) Minimum RNG multiplier for Dragon Games Equipment’s number of kicks.</li>
+<li><strong>dragonflight.ruby_whelp_shell_training</strong> (scope: global, default: none) <code dir="auto">/</code>-delimited string indicating the training level for each possible Ruby Whelp Shell proc. For example: <code dir="auto">dragonflight.ruby_whelp_shell_training=sleepy_ruby_warmth:4/under_red_wings:2</code>. Procs are:
+<ul>
+<li><code dir="auto">fire_shot</code> - single target damage</li>
+<li><code dir="auto">lobbing_fire_nova</code> - aoe damage</li>
+<li><code dir="auto">curing_whiff</code> - single target healing</li>
+<li><code dir="auto">mending_breath</code> - aoe heal</li>
+<li><code dir="auto">sleepy_ruby_warmth</code>- crit buff</li>
+<li><code dir="auto">under_red_wings</code> - haste buff</li>
+</ul>
+</li>
+<li><strong>dragonflight.ruby_whelp_shell_context</strong> (scope: global, default: none) <code dir="auto">/</code>-delimited string indicating the context-aware procs for Ruby Whelp Shell that can occur during the simulation. By default, any of the procs will be able to occur. For example: <code dir="auto">dragonflight.ruby_whelp_shell_context=fire_shot/curing_whiff/sleepy_ruby_warmth/under_red_wings</code></li>
+<li><strong>dragonflight.player.ruby_whelp_shell_training</strong> (scope: player, default: none) Equivalent to <code dir="auto">dragonflight.ruby_whelp_shell_training</code>, except that it can be set for each player individually. If both options are present, this option will override the global option.</li>
+<li><strong>dragonflight.player.ruby_whelp_shell_context</strong> (scope: player, default: none) Equivalent to <code dir="auto">dragonflight.ruby_whelp_shell_context</code>, except that it can be set for each player individually. If both options are present, this option will override the global option.</li>
+<li><strong>dragonflight.screaming_black_dragonscale_damage</strong> (scope: global, default: false)</li>
+<li><strong>dragonflight.ominous_chromatic_essence_dragonflight</strong> (scope: player, default: obsidian)
+<ul>
+<li><code dir="auto">obsidian</code> grants an equal amount of all stats (their sum is equal to the single stat flights)</li>
+<li><code dir="auto">ruby</code> grants Versatility</li>
+<li><code dir="auto">bronze</code> grants Haste</li>
+<li><code dir="auto">azure</code> grants Mastery</li>
+<li><code dir="auto">emerald</code> grants Critical Strike</li>
+</ul>
+</li>
+<li><strong>dragonflight.ominous_chromatic_essence_allies</strong> (scope: player, default: none) <code dir="auto">/</code>-delimited string containing a list of multiple flights</li>
+<li><strong>dragonflight.ashkandur_humanoid</strong> (scope: player, default: false)</li>
+<li><strong>dragonflight.flowstone_starting_state</strong> (scope: player, default: high) options: ebb/flood/high/low</li>
+<li><strong>dragonflight.adaptive_stonescales_period</strong> (scope: global, default: 3 seconds) Period in which to try to trigger adapative Stonescales.</li>
+<li><strong>dragonflight.spoils_of_neltharus_initial_type</strong> (scope: player, default: none) Specify “crit”, “haste”, “mastery”, or “vers” to begin the combat with.</li>
+<li><strong>dragonflight.igneous_flowstone_double_lava_wave_chance</strong> (scope: player, default: 0) Chance for Lava Wave to hit the target twice.</li>
+<li><strong>dragonflight.nymue_forced_immobilized</strong> (scope: player, default: false) Whether or not to force the extra damage from Nymue’s Unraveling Spindle against Immobilized targets. Also works if the target has the <code dir="auto">stun</code> buff.</li>
+<li><strong>dragonflight.embersoul_dire_chance</strong> (scope: global; default: 0.0) Sets the chance of proccing Blazing Soul every <code dir="auto">dragonflight.embersoul_dire_interval</code> seconds.</li>
+<li><strong>dragonflight.embersoul_dire_interval</strong> (scope: global; default: 10s) Sets the period between checking the <code dir="auto">dragonflight.embersoul_dire_chance</code> to proc Blazing Soul. This interval is subject to a gaussian distribution.</li>
+<li><strong>dragonflight.embersoul_dire_interval_stddev</strong> (scope: global; default: 2.5s) Standard deviation of embersoul_dire_interval.</li>
+<li><strong>dragonflight.gift_of_ursine_vengeance_period</strong> (scope: global; default: 750ms) Sets the base interval to attempt to proc Gift of Ursine Vengeance.</li>
+<li><strong>dragonflight.balefire_branch_loss_rng_type</strong> (scope: player; default: constant, rppm for Dungeons) Sets the method to simulate loss of stacks due to taking damage.
+<ul>
+<li><em>constant</em> will cause a loss to happen on a set constant tick. <strong>dragonflight.balefire_branch_loss_tick</strong> (default: 2) sets the tick period. This is the default type except as noted below.</li>
+<li><em>rppm</em> will perform a rppm check every second to determine if loss happens. <strong>dragonflight.balefire_branch_loss_rppm</strong> (default: 2) sets the rppm. This is the defaule type for DungeonSlice &amp; DungeonRoute sims.</li>
+<li><em>percent</em> will perform a percent check every second to determine if loss happens. <strong>dragonflight.balefire_branch_loss_percent</strong> (default: 0.2) sets the percent.</li>
+</ul>
+</li>
+<li><strong>dragonflight.balefire_branch_loss_stacks</strong> (scope: player; default: 2) Sets the number of stacks lost per settings above.</li>
+<li><strong>dragonflight.witherbarks_branch_timing</strong> (scope: player; default: 1/1/7) Sets the timing for Witherbarks Branch buffs in seconds. E.g. <code dir="auto">dragonflight.witherbarks_branch_timing=1/1/7</code></li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="consumables--enchants-1">Consumables / Enchants</h3><a class="sl-anchor-link" href="#consumables--enchants-1"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Consumables / Enchants”</span></a></div>
+<ul>
+<li><strong>dragonflight.corrupting_rage_uptime</strong> (scope: global, default: 0.5, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.</li>
+<li><strong>dragonflight.gyroscopic_kaleidoscope_stat</strong> (scope: global; default: haste) Sets what stats Gyroscopic Kaleidoscope will proc. Either “mastery”, “haste”, “crit” or “versatility”.</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="crafted-gear">Crafted Gear</h3><a class="sl-anchor-link" href="#crafted-gear"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Crafted Gear”</span></a></div>
+<ul>
+<li><strong>dragonflight.blue_silken_lining_uptime</strong> (scope: global; default: 0.4; min: 0.0; max: 1.0) Sets the percent of time that Zone of Focus will be active in the sim.</li>
+<li><strong>dragonflight.blue_silken_lining_update_interval</strong> (scope: global; default: 10s) Controls how often the sim rolls for Blue Silken Lining uptime. This interval is subject to a gaussian distribution.</li>
+<li><strong>dragonflight.blue_silken_lining_update_interval_stddev</strong> (scope: global; default: 2.5s) Standard deviation of blue_silken_lining_update_interval.</li>
+<li><strong>dragonflight.hood_of_surging_time_chance</strong> (scope: global; default: 0.0) Sets the chance of proccing First Strike every <code dir="auto">dragonflight.hood_of_surging_time_period</code> seconds on top of any add spawns.</li>
+<li><strong>dragonflight.hood_of_surging_time_period</strong> (scope: global; default: 5s) Sets the period between checking the <code dir="auto">dragonflight.hood_of_surging_time_chance</code> to proc First Strike on top of any add spawns.</li>
+<li><strong>dragonflight.hood_of_surging_time_stacks</strong> (scope: global; default: 1) Sets the stacks of Prepared Time to proc when period and chance are set.</li>
+<li><strong>dragonflight.allied_wristguards_allies</strong> (scope: global, default: 3, min: 0, max: 3) Number of nearby allies for the effect of Allied Wristguards of Companionship.</li>
+<li><strong>dragonflight.allied_wristguards_ally_leave_chance</strong> (scope: global, default: 0.05, min: 0.0, max: 1.0) Chance for nearby allies to move out of range for Allied Wristguards of Companionship.</li>
+<li><strong>dragonflight.undulating_sporecloak_uptime</strong> (scope: global; default: 0.9) Sets the uptime of the Versatility buff to mimic being above 70% HP for a percentage of the encounter for Undulating Sporecloak.</li>
+<li><strong>dragonflight.undulating_sporecloak_update_interval</strong> (scope: global; default: 10s) Controls how often the sim rolls for Undulating Sporecloak uptime. This interval is subject to a gaussian distribution.</li>
+<li><strong>dragonflight.undulating_sporecloak_update_interval_stddev</strong> (scope: global; default: 2.5s) Standard deviation of undulating_sporecloak_update_interval.</li>
+<li><strong>dragonflight.dreamtenders_charm_uptime</strong> (scope: global; default: 0.9) Sets the uptime of the Crit buff to mimic being above 70% HP for a percentage of the encounter for Dreamtender’s Charm. Note that this percentage is not strictly full uptime because the embellishment has a lockout period that SimC respects. Setting to 100% uptime does not trigger the lockout.</li>
+<li><strong>dragonflight.dreamtenders_charm_update_interval</strong> (scope: global; default: 10s) Controls how often the sim rolls for Dreamtender’s Charm uptime. Stays within the ICD to only proc when available. This interval is subject to gaussian distribution.</li>
+<li><strong>dragonflight.dreamtenders_charm_update_interval_stddev</strong> (scope: global; default: 2.5s) Standard deviation of dreamtenders_charm_update_interval.</li>
+<li><strong>dragonflight.verdant_conduit_allies</strong> (scope: player; default: 0; max: 2) Controls how many allies are also running with Verdant Embrace to increase the amount of stats and scale the RPPM.</li>
+<li><strong>dragonflight.rallied_to_victory_ally_estimate</strong> (scope: gloabl; default: 0; max: 1) Boolean on whether or not to give you more Versatiltiy when proccing Allied Wristguards of Time Dilation to simulate the benefit of giving it to allies. Amount of allies controlled with <code dir="auto">dragonflight.rallied_to_victory_min_allies</code> by default will roll between 0-4 allies.</li>
+<li><strong>dragonflight.rallied_to_victory_min_allies</strong> (scope: gloabl; default: 0; max: 4) Controls the min number of allies with the <code dir="auto">dragonflight.rallied_to_victory_ally_estimate</code> setting.</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="shadowlands">Shadowlands</h2><a class="sl-anchor-link" href="#shadowlands"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Shadowlands”</span></a></div>
+<ul>
+<li><strong>shadowlands.enabled</strong> (scope: global, default: 0) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="covenants">Covenants</h3><a class="sl-anchor-link" href="#covenants"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Covenants”</span></a></div>
+<ul>
+<li><strong>covenant</strong> (scope: player; default: none) A player option that takes a covenant identifier or tokenized name. This will enable the corresponding covenant ability for the player’s class.</li>
+<li><strong>soulbind</strong> (scope: player; default: empty) A player option that takes a <code dir="auto">/</code> delimited list of soulbind abilities and conduits. Each conduit has a rank specified after the conduit identifier separated by a <code dir="auto">:</code>. A third optional argument, separated also by <code dir="auto">:</code>, can be used to denote whether the conduit is empowered <code dir="auto">1</code> or not <code dir="auto">0</code>. Note that the simulator currently does not check whether the combination of soulbinds and conduits is possible. This is a conscious decision to give the users the most flexibility in how they want to express their soulbind-related effects in an actor profile. This may change in the future if it turns out that we need to apply limitations to the valid set of soulbinds. You can also use the tokenized name of the conduit or soulbind ability as the identifier. This option will not do anything if a covenant is not selected for the actor.</li>
+<li><strong>renown</strong> (scope: player; default: 0) A player option that takes the player’s renown level. This will enable the appropriate renown reward abilities.</li>
+</ul>
+<p>Soulbind token schemes:</p>
+<ul>
+<li><code dir="auto">conduit_id:rank[:empowered]</code></li>
+<li><code dir="auto">tokenized_conduit_name:rank[:empowered]</code></li>
+<li><code dir="auto">soulbind_spell_id</code></li>
+<li><code dir="auto">tokenized_soulbind_name</code></li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="runeforge-legendaries">Runeforge Legendaries</h3><a class="sl-anchor-link" href="#runeforge-legendaries"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Runeforge Legendaries”</span></a></div>
+<p>Runeforge legendary effects are applied to items through bonus ids. A list of Runeforge legendary effects and their bonus ids (see column 1) can be found here: <a href="https://github.com/simulationcraft/simc/blob/shadowlands/engine/dbc/generated/item_runeforge.inc">https://github.com/simulationcraft/simc/blob/shadowlands/engine/dbc/generated/item_runeforge.inc</a></p>
+<div class="sl-heading-wrapper level-h3"><h3 id="other-90-options">Other 9.0 options</h3><a class="sl-anchor-link" href="#other-90-options"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Other 9.0 options”</span></a></div>
+<p>To add these use the syntax <code dir="auto">shadowlands.option_name=value</code>. For example <code dir="auto">shadowlands.combat_meditation_extend_chance=0.5</code>.</p>
+<ul>
+<li><strong>shadowlands.combat_meditation_extend_chance</strong> (scope: global; default: 1.0) The chance that the player picks up each orb to extend Combat Meditation soulbind ability.</li>
+<li><strong>shadowlands.pointed_courage_nearby</strong> (scope: global; default: 5; min: 0; max: 5) The number of nearby allies and enemies for the Pointed Courage soulbind ability. The player does not count as an ally, but pets do.</li>
+<li><strong>shadowlands.lead_by_example_nearby</strong> (scope: global; default: dynamic; min: 0; max: 4) The number of nearby allies for the Lead by Example soulbind ability. Profiles with position set to “front” or “back” have a default value of 4 whereas “ranged back” and other positions have a default value of 2. The DungeonSlice fight style makes the default value 2 for every position.</li>
+<li><strong>shadowlands.stone_legionnaires_in_party</strong> (scope: global; default: 0) The number of other players in each player’s party with the Stone Legion Heraldry trinket.</li>
+<li><strong>shadowlands.crimson_choir_in_party</strong> (scope: global; default: 0) The number of other players in each player’s party with the Cabalist’s Hymnal trinket.</li>
+<li><strong>shadowlands.judgment_of_the_arbiter_arc_chance</strong> (scope: global; default: 0) Chance that Judgment of the Arbiter will arc to an ally</li>
+<li><strong>shadowlands.volatile_solvent_type</strong> (scope: global; default: mastery) The type of corpse/buff you’ve consumed for the Volatile Solvent soulbind. Multiple types can be specified, delimited by <code dir="auto">/</code> or <code dir="auto">:</code>.  Valid types are:
+<ul>
+<li>Corpse type: “humanoid”, “beast”, “dragonkin”, “elemental”, “giant”</li>
+<li>Buff type: “mastery”, “primary”, “crit”, “magic”, “physical”</li>
+</ul>
+</li>
+<li><strong>shadowlands.disable_soul_igniter_second_use</strong> (scope: global; default: 1) Setting to 1 will wait to trigger the AOE, setting to 0 will trigger the AOE early</li>
+<li><strong>shadowlands.unbound_changeling_stat_type</strong> (scope: global; default: ‘default’) Override Unbound Changeling’s effect. Valid options:
+<ul>
+<li>“all”: Proc that grants crit, haste, and mastery</li>
+<li>“crit”: Proc that grants crit</li>
+<li>“haste”: Proc that grants haste</li>
+<li>“mastery”: Proc that grants mastery</li>
+<li>Any other value will use the proc determined by the bonus ID on the item</li>
+</ul>
+</li>
+<li><strong>shadowlands.anima_field_emitter_mean</strong> (scope: global; default: 0) Average number of seconds that the player will receive the haste buff</li>
+<li><strong>shadowlands.anima_field_emitter_stddev</strong> (scope: global; default: 0) Standard deviation number of seconds that the player will receive the haste buff</li>
+<li><strong>shadowlands.retarget_shadowgrasp_totem</strong> (scope: global; default: 0) Delay in (fractional) seconds to perform a retargeting based on the use_item action targeting rules</li>
+<li><strong>shadowlands.disable_iqd_execute</strong> (scope: global; default: 0) Disables the execute effect of Inscrutable Quantum Device to make it always proc stats</li>
+<li><strong>shadowlands.iqd_stat_fail_chance</strong> (scope: global; default: 0.0) Sets the chance to not gain a stat buff outside Bloodlust when Inscrutable Quantum Device is activated</li>
+<li><strong>shadowlands.thrill_seeker_killing_blow_chance</strong> (scope: global; default: dynamic, min: 0.0, max: 1.0) Enables the 4 stack increase to Thrill Seeker when an enemy dies inside of a sim. Default chance is set at 5% for all sims except DungeonSlice which defaults to 25% to replicate chance of getting a killing blow.</li>
+<li><strong>shadowlands.gluttonous_spike_overheal_chance</strong> (scope: global; default: 1.0) Chance that Gluttonous Spike trinket procs additional damage from overhealing.</li>
+<li><strong>shadowlands.shattered_psyche_allies</strong> (scope: global; default: 0) The number of other players using the Memory of Past Sins trinket.</li>
+<li><strong>shadowlands.memory_of_past_sins_precast</strong> (scope: global; default: 0.0, min: 0.0, max: 30.0) The number of seconds before the fight to use the Memory of Past Sins trinket.</li>
+<li><strong>shadowlands.wild_hunt_tactics_duration_multiplier</strong> (scope: global; default: 1.0) Change the duration that Wild Hunt Tactics is active to better match the given fight. For example, a value of 0.8 will reduce the duration of the effect by 20%.</li>
+<li><strong>shadowlands.field_of_blossoms_duration_multiplier</strong> (scope: global; default: 1.0, min: 0.0, max: 1.0) Modifies the duration of the Field of Blossoms by multiplying the base duration of each class.</li>
+<li><strong>shadowlands.first_strike_chance</strong> (scope: global; default: 0.0) Sets the chance of proccing First Strike every <code dir="auto">shadowlands.first_strike_period</code> seconds on top of any add spawns.</li>
+<li><strong>shadowlands.first_strike_period</strong> (scope: global; default: 5s) Sets the period between checking the <code dir="auto">shadowlands.first_strike_chance</code> to proc First Strike on top of any add spawns.</li>
+</ul>
+<div class="sl-heading-wrapper level-h4"><h4 id="91---chains-of-domination-options">9.1 - Chains of Domination options</h4><a class="sl-anchor-link" href="#91---chains-of-domination-options"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “9.1 - Chains of Domination options”</span></a></div>
+<ul>
+<li><strong>shadowlands.party_favor_type</strong> (scope: global; default: random) The type of buff you’ve received from the Party Favors Soulbind by consuming The Mad Duke’s Tea. Valid types are:
+<ul>
+<li>Buff type: “none”, “random”, “haste”, “crit”, “primary”, “versatility”</li>
+</ul>
+</li>
+<li><strong>shadowlands.better_together_ally</strong> (scope: global; default: true) Enables the Pelegos Better Together trait from activating or not. Setting to false causes it to not be triggered.</li>
+<li><strong>shadowlands.battlefield_presence_enemies</strong> (scope: global; default: dynamic, min: 0, max: 3) Controls the amount of enemies/buff stacks of General Draven’s Battlefield Presence trait. By default this will change throughout the sim based on the amount of enemies in the sim. So if you have 2 enemies in the sim you will have 2 buff stacks. During a sim like DungeonSlice this will fluctuate throughout adds spawning and despawning up to a maximum of 3 stacks.</li>
+<li><strong>shadowlands.titanic_ocular_gland_worthy_chance</strong> (scope: global; default: 1.0, min: 0.0, max: 1.0) The fraction of the time that the player is above the health threshold for Titanic Ocular Gland trinket.</li>
+<li><strong>shadowlands.newfound_resolve_success_chance</strong> (scope: global; default: 1.0, min: 0.0, max: 1.0) The percentage of times the player faces their Doubt to gain Newfound Resolve.</li>
+<li><strong>shadowlands.newfound_resolve_default_delay</strong> (scope: global; default: 4) The average number of seconds that the player will wait before facing their Doubt to gain Newfound Resolve.</li>
+<li><strong>shadowlands.newfound_resolve_delay_relstddev</strong> (scope: global; default: 0.2) The relative standard deviation used with the above option.</li>
+<li><strong>shadowlands.soleahs_secret_technique_type</strong> (scope: global; default: haste, mastery for balance/feral) The stat buff you gain from the Soleahs Secret Technique trinket. This is the self bonus only, not the ally bonus. Options are <code dir="auto">haste</code>, <code dir="auto">crit</code>, <code dir="auto">mastery</code>, <code dir="auto">versatility</code>, or <code dir="auto">none</code>.</li>
+<li><strong>shadowlands.soleahs_secret_technique_type_override</strong> (scope: player; default: empty) The stat buff an actor gains from the Soleahs Secret Technique trinket. This option can be used to override the sim-wide option <code dir="auto">shadowlands.soleahs_secret_technique_type</code>. The value space is identical to the sim-wide option.</li>
+<li><strong>shadowlands.enable_domination_gems</strong> (scope: global; default: 1) Enables the domination shards. Setting to 0 will disable gems and also the associated set bonuses.</li>
+<li><strong>shadowlands.enable_rune_words</strong> (scope: global; default: 1) Enables the set bonuses for domination shards. Setting to 0 will disable the set bonuses but the individual gems will still be effective (e.g. how they operate in M+)</li>
+<li><strong>shadowlands.precombat_pustules</strong> (scope: global; default: 9; min: 1; max: 9) Controls the number of pustules gained from precombat fleshcraft.</li>
+<li><strong>shadowlands.cruciform_veinripper_proc_rate</strong> (scope: global; default 0; min: 0; max: 1) Controls the proc rate of Veinripper weapon proc. Used mostly for tanks who have a hard time to proc the weapon normally since Bosses cannot be slowed; nor are tanks behind the boss normally.</li>
+<li><strong>shadowlands.reactive_defense_matrix_interval</strong> (scope: global; default 0) Determines how often a trigger attempt of the 30-second cooldown aspect of Reactive Defense Matrix occurs. This does not actually affect the player’s health, it will simply trigger the absorb shield if the cooldown is ready.</li>
+<li><strong>shadowlands.adaptive_armor_fragment_uptime</strong> (scope: global; default 0.4; min: 0; max: 0.5) Sets the uptime of the Adaptive Armor Fragment buff.</li>
+</ul>
+<div class="sl-heading-wrapper level-h4"><h4 id="92---eternitys-end-options">9.2 - Eternity’s End options</h4><a class="sl-anchor-link" href="#92---eternitys-end-options"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “9.2 - Eternity’s End options”</span></a></div>
+<ul>
+<li><strong>shadowlands.grim_eclipse_dot_duration_multiplier</strong> (scope: global; default: <code dir="auto">1.0</code>) Let’s you adjust how long the DoT component is active on the target via a percent modifier. The will remove duration at the end of the DoT, but still not change when you get the haste buff afterwards.</li>
+<li><strong>shadowlands.grim_eclipse_buff_duration_multiplier</strong> (scope: global; default: <code dir="auto">0.9</code>) Let’s you adjust how much uptime you have of the haste buff component of the trinket. This removes duration at the start of the buff to mimic taking a bit to get into it.</li>
+<li><strong>shadowlands.the_first_sigil_fleshcraft_cancel_time</strong> (scope: global; default: <code dir="auto">50ms</code>) Sets the delay after which Fleshcraft is cancelled when using the The First Sigil trinket.</li>
+<li><strong>shadowlands.earthbreakers_impact_weak_points</strong> (scope: global; default: <code dir="auto">3</code>) Sets how many weak points will  be triggered when using the Earthbreaker’s Impact trinket.</li>
+<li><strong>shadowlands.chains_of_domination_auto_break</strong> (scope: global; default: <code dir="auto">true</code>) Sets whether to automatically break the chains at max value when using the Chains of Domination trinket.</li>
+<li><strong>shadowlands.antumbra.swap</strong> (scope: player; default: <code dir="auto">false</code>) Setting this to <code dir="auto">true</code> will allow the usage of antumbra_swap actions in APL.</li>
+<li><strong>shadowlands.antumbra.int_diff</strong> (scope: player; default: <code dir="auto">0</code>) Controls how much Intellect the sim will give you (or take, if negative) when you swap off Antumbra.</li>
+<li><strong>shadowlands.antumbra.haste_diff</strong> (scope: player; default: <code dir="auto">0</code>) Controls how much Haste rating the sim will give you (or take, if negative) when you swap off Antumbra.</li>
+<li><strong>shadowlands.antumbra.mastery_diff</strong> (scope: player; default: <code dir="auto">0</code>) Controls how much Mastery rating the sim will give you (or take, if negative) when you swap off Antumbra.</li>
+<li><strong>shadowlands.antumbra.crit_diff</strong> (scope: player; default: <code dir="auto">0</code>) Controls how much Crit rating the sim will give you (or take, if negative) when you swap off Antumbra.</li>
+<li><strong>shadowlands.antumbra.vers_diff</strong> (scope: player; default: <code dir="auto">0</code>) Controls how much Versatility rating the sim will give you (or take, if negative) when you swap off Antumbra.</li>
+<li><strong>shadowlands.antumbra.stam_diff</strong> (scope: player; default: <code dir="auto">0</code>) Controls how much Stamina the sim will give you (or take, if negative) when you swap off Antumbra.</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="battle-for-azeroth">Battle for Azeroth</h2><a class="sl-anchor-link" href="#battle-for-azeroth"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Battle for Azeroth”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="azerite">Azerite</h3><a class="sl-anchor-link" href="#azerite"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Azerite”</span></a></div>
+<p>Battle for Azeroth introduces Azerite powers to specific item slots. Simulationcraft supports the specification of selected azerite powers for items, and the actor-level overriding of azerite powers.</p>
+<ul>
+<li><strong>azerite_powers</strong> (scope: item; default: empty) A new item option that takes a <code dir="auto">/</code> or <code dir="auto">:</code> delimited list of azerite power identifiers. Note that the simulator currently does not check whether the item is allowed to be azerite empowered. This is a conscious decision to give the users the most flexibility in how they want to express their azerite-related effects in an actor profile. This may change in the future if it turns out that we need to apply limitations to the valid set of items that can be empowered. You can also use the tokenized name of the azerite power as the identifier.</li>
+<li><strong>azerite_level</strong> (scope: item; default: 0) A new item option that specifies the azerite level of an item. Azerite level maps to an actual item level through a game table. Values from 1 to 300 are supported. Note that any item can be given an azerite level, not just the necklace in Battle for Azeroth.</li>
+<li><strong>azerite_override</strong> (scope: player; default: empty) An option that takes a list of <code dir="auto">/</code> delimited azerite power override specifications. Each azerite power override is of the format <code dir="auto">tokenized_power_name:ilevel</code> or <code dir="auto">power_id:ilevel</code>. A special <code dir="auto">ilevel</code> value of 0 will disable the azerite power for the actor, no matter the source (i.e., item, or other azerite power override specifications). You can also use the azerite power id as the name of the azerite power.</li>
+<li><strong>disable_azerite</strong> (scope: global; default: empty) An option that allows the user to disable some or all sources of azerite-related effects from the simulator. An option value <code dir="auto">items</code> will disable azerite-related effects from item sources, and an option value <code dir="auto">all</code> or <code dir="auto">1</code> will disable all azerite-related effects (i.e., items and overrides) from the simulator.</li>
+</ul>
+<p>Additionally, the player expression <code dir="auto">azerite.&lt;tokenized_power_name&gt;.enabled</code> will evaluate to <code dir="auto">1</code> if the actor has the azerite power selected (through items or overrides). Otherwise the expression will evaluate to <code dir="auto">0</code>. Player expression <code dir="auto">azerite.&lt;tokenized_power_name&gt;.rank</code> evaluates to the number of items the actor has that has <code dir="auto">&lt;tokenized_power_name&gt;</code> selected, or the number of overrides specified for the power..</p>
+<p>A map containing the power ID, spell ID and name of each azerite trait can be found here:
+<a href="https://github.com/simulationcraft/simc/blob/bfa-dev/engine/dbc/generated/azerite.inc">https://github.com/simulationcraft/simc/blob/bfa-dev/engine/dbc/generated/azerite.inc</a></p>
+<div class="sl-heading-wrapper level-h3"><h3 id="azerite-power-and-item-specific-options">Azerite-power and item specific options</h3><a class="sl-anchor-link" href="#azerite-power-and-item-specific-options"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Azerite-power and item specific options”</span></a></div>
+<p>A number of azerite powers and items have characteristics that can be customized through expansion specific options. All of the following options are in the sim scope (i.e., global option that affects all actors in the profile). The following options are currently implemented.</p>
+<ul>
+<li><strong>bfa.battlefield_debuff_stacks</strong> (scope: global; default: 2) The number of damage events each actor is allowed to generate from each Battlefield Focus / Precision azerite trait proc on a target. Accepts values from the range 1-25.</li>
+<li><strong>bfa.gutripper_default_rppm</strong> (scope: global; default: 1.0) The proc chance of the Gutripper azerite power when the target has more than 30% health.</li>
+<li><strong>bfa.jes_howler_allies</strong> (scope: global; default: 4) The number of allies Jes’ Howler trinket hits. Accepts values from 0 to 4.</li>
+<li><strong>bfa.reorigination_array_stacks</strong> (scope: gobal; default: 0) The number of stacks provided by the Uldir (raidzone) only buff, enabled by the traits “Laser Matrix” and “Archive of the Titans”. Stacks are unlocked by killing three raid bosses each week. After doing so for 10 weeks the maximum stack count of 10 is unlocked. Accepts values from 0 to 10.</li>
+<li><strong>bfa.secrets_of_the_deep_chance</strong> (scope: global; default: 0.1) The chance to spawn a “rare” droplet (a void droplet). Accepts values from 0 to 1.</li>
+<li><strong>bfa.secrets_of_the_deep_collect_chance</strong> (scope: global; default: 1.0) The chance that the actors will pick up the droplets. Accepts values from 0 to 1.</li>
+<li><strong>bfa.initial_archive_of_the_titans_stacks</strong> (scope: global; default: 0) The number of stacks of the azerite trait Archive of the Titans to apply at the start of combat. This trait normally applies its first stack 5s into combat and increase by one stack every 5s thereafter. The stacks are reset when entering combat with a raid boss, but in non-raid encounters, such as Mythic+ dungeons, you can typically enter combat with certain number of stacks already present.</li>
+<li><strong>bfa.seductive_power_pickup_chance</strong> (scope: global; default: 1.0) Chance of picking up the visage spawned by Seductive Power azerite trait.</li>
+<li><strong>bfa.initial_seductive_power_stacks</strong> (scope: global; default: 0) How many stacks of Seductive Power buff to apply when the combat starts.</li>
+<li><strong>bfa.randomize_oscillation</strong> (scope: global; default: 1) Randomize Oscillation state of Variable Intensity Gigavolt Oscillating Reactor at the beginning of combat.</li>
+<li><strong>bfa.auto_oscillating_overload</strong> (scope: global; default: 1) Automatically cast Oscillating Overload (the On-Use effect of Variable Intensity Gigavolt Oscillating Reactor) when the V.I.G.O.R. Engaged buff reaches its maximum stack count. Disabling this option will enable <code dir="auto">use_items</code> and <code dir="auto">use_item</code> actions to control the triggering of Oscillating Overload.</li>
+<li><strong>bfa.zuldazar</strong> (scope: global; default: 0) Specifies whether the players are in Zuldazar, which is relevant for the Gift of the Loa set bonus from Battle of Dazar’alor.</li>
+<li><strong>bfa.covenant_period</strong> (scope: global; default: 1.0) Specifies the period (in seconds) of Treacherous Covenant updates (i.e. buff application or expiration).</li>
+<li><strong>bfa.covenant_chance</strong> (scope: global; default: 1.0) Chance of gaining Treacherous Covenant buff on each update (see <strong>bfa.covenant_period</strong>). This roughly corresponds to the buff uptime.</li>
+<li><strong>bfa.incandescent_sliver_chance</strong> (scope: global; default: 1.0) Chance of gaining a stack of Incandescent Sliver buff on each tick. When the random roll fails, a stack is removed (as if someone without the trinket was standing next to the actor).</li>
+<li><strong>bfa.fight_or_flight_period</strong> (scope: global; default: 1.0) Specifies the period (in seconds) of Fight or Flight proc attempts (as if the player was dropping below 35% hp in-game).</li>
+<li><strong>bfa.fight_or_flight_chance</strong> (scope: global; default: 0) Chance of triggering Fight or Flight buff (in the limits of the buff’s own internal cooldown) on each attempt (see <strong>bfa.fight_or_flight_period</strong>).</li>
+<li><strong>bfa.harbingers_inscrutable_will_silence_chance</strong>, <strong>bfa.harbingers_inscrutable_will_move_chance</strong> (scope: global; default: 0.0 <code dir="auto">silence_chance</code>, 1.0 <code dir="auto">move_chance</code>) Specify the distribution of the three possible outcomes of a Harbinger’s Inscrutable Will proc. <code dir="auto">silence_chance</code> gives the fraction of projectiles that silence the player, <code dir="auto">move_chance</code> gives the fraction of projectiles that do not silence the player but require movement, the remaining projectiles do not silence nor require movement. If <code dir="auto">silence_chance + move_chance &gt; 1</code>, <code dir="auto">silence_chance</code> takes priority. For example: <code dir="auto">silence_chance=0.4 move_chance=0.2</code> results in 40% procs silencing the player, 20% moving the player and 40% doing nothing. <code dir="auto">silence_chance=0.8 move_chance=0.6</code> results in 80% procs silencing the player and 20% moving the player.</li>
+<li><strong>bfa.aberrant_tidesage_damage_chance</strong> (scope: global; default: 1) Chance that the player is above 60% HP when Leggings of the Aberrant Tidesage proc.</li>
+<li><strong>bfa.fathuuls_floodguards_damage_chance</strong> (scope: global; default: 1) Chance the player is above 90% HP when Fa’thuul’s Floodguards proc.</li>
+<li><strong>bfa.grips_of_forsaken_sanity_damage_chance</strong> (scope: global; default: 1) Chance the player is above 90% HP when Grips of Forsaken Sanity proc.</li>
+<li><strong>bfa.stormglide_steps_take_damage_chance</strong> (scope: global; default: 0) Chance every second that the player takes damage which will remove the Untouchable buff.</li>
+<li><strong>bfa.lurkers_insidious_gift_duration</strong> (scope: global; default: 0) Overrides the duration of the Lurker’s Insidious Gift trinket buff. A value of 0 will use the buff’s maximum duration.</li>
+<li><strong>bfa.abyssal_speakers_gauntlets_shield_duration</strong> (scope: global; default: 0) Overrides the duration of the Ephemeral Vigor buff from Abyssal Speaker’s Gauntlets. A value of 0 will use the buff’s maximum duration. If the absorb shield is fully consumed by damage taken by the player, the effect will end.</li>
+<li><strong>bfa.trident_of_deep_ocean_duration</strong> (scope: global; default: 0) Overrides the duration of the Custody of the Deep absorb buff from Trident of Deep Ocean. A value of 0 will use the buff’s maximum duration. If the absorb shield is fully consumed by damage taken by the player, the effect will end. Note that the effect is rppm based on damage taken only, and will not proc in the normal scenario of a non-tank simulation.</li>
+<li><strong>bfa.legplates_of_unbound_anguish_chance</strong> (scope: global; default: 1.0) Set the chance that the check for having a higher health percentage than the target succeeds. Note: since the proc is rppm-based, a reduced chance won’t affect the number of procs linearly. As this replaces the health percentage check entirely, setting the enemy’s fixed health percentage will not affect the proc’s behaviour unless you also change this setting. Accepts values from 0 to 1.</li>
+</ul>
+<div class="sl-heading-wrapper level-h4"><h4 id="82-rise-of-azshara-options">8.2 Rise of Azshara options</h4><a class="sl-anchor-link" href="#82-rise-of-azshara-options"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “8.2 Rise of Azshara options”</span></a></div>
+<ul>
+<li><strong>bfa.loyal_to_the_end_allies</strong> (scope: global; default 0) Set the number of allies that have the azerite trait Loyal to the End. Each ally increases the mastery bonus you gain from this trait, up to a maximum of 4 allies. Accepts values from 0 to 4.</li>
+<li><strong>bfa.loyal_to_the_end_ally_death_chance</strong> (scope: global; default 0.0) When an ally who has this trait dies, you are granted a buff to your haste, mastery, critical strike rating equal to the mastery rating you get from this trait. If this option is set, every 60s a check will be made to see if there is a chance equal to the setting that the buff will be triggered. Accepts values from 0.0 to 1.0.<br>
+<strong>bfa.loyal_to_the_end_ally_death_timer</strong> (scope: global; default 60; minimum 1) can be used to set the frequency in seconds in which the check is made.</li>
+<li><strong>bfa.undulating_tides_lockout_chance</strong> (scope: global; default 0.0) If you fall below 50% hp, undulating tides will give you a shield and give you a debuff that prevents any damage procs for 45s. If this option is set, every 60s a check will be made to see if there is a chance equal to the setting that the debuff will be triggered. Accepts values from 0.0 to 1.0.<br>
+<strong>bfa.undulating_tides_lockout_timer</strong> (scope: global; default 60; minimum 1) can be used to set the frequency in seconds in which the check is made.</li>
+<li><strong>bfa.blood_of_the_enemy_in_range</strong> (scope: global; default 1.0) Set the chance that you will be in range for the Blood of the Enemy major power. This ability is a 12 yd point blank area of effect that, at appropriate ranks, grants you an ‘increased critical hit damage’ buff and afflicts an ‘increased chance to be critically hit’ debuff on the enemy. This option simulates the chance that you will be out of range, thus doing no damage and not afflicting the debuff, while still getting the buff. Accepts values from 0.0 to 1.0.</li>
+<li><strong>bfa.worldvein_allies</strong> (scope: global; default 0) Set the amount of allies also using the Worldvein Resonance minor. At about 3 allies you will have 100% uptime on 4 stacks of the buff when using the rank 3 version of this essence.</li>
+<li><strong>bfa.shiver_venom</strong> (scope: global; default 0) Specify whether items that rely on the Shiver Venom debuff from Shiver Venom Relic should assume the debuff is present. Applies to Shiver Venom Crossbow and Shiver Venom Lance.</li>
+<li><strong>bfa.leviathans_lure_base_rppm</strong> (scope: global; default 0.5) Leviathan’s Lure has a base rppm on the main damage proc which is increased over time by the trinket’s second proc. This base rppm is currently unknown, and can be set with this option. Accepts values from 0.0 to 2.0.</li>
+<li><strong>bfa.aquipotent_nautilus_catch_chance</strong> (scope: global; default 1.0) Aquipotent Nautilus sends out a wave which damages enemies then returns to you. Catching the returning wave will lower the cooldown by 30s. The chance to catch the returning wave can be set with this option. Accepts values from 0.0 to 1.0.</li>
+<li><strong>bfa.zaquls_portal_key_move_chance</strong> (scope: global; default 0.0) Za’qul’s Portal Key will summon a void tear which will open a portal to grant to a buff when you move near the tear. This option sets the chance that you will be forced to move to open the portal. Accepts values from 0.0 to 1.0.</li>
+<li><strong>bfa.anuazshara_unleash_time</strong> (scope: global; default <em>disabled</em>) Anu-Azshara, Staff of the Eternal will unleash its damage if you fall below 10% hp or mana. This option will set, in seconds, how many seconds into combat this will happen. Accepts minimum value of 1.</li>
+<li><strong>bfa.nazjatar</strong> (scope: global; default 1) Set to 0 to disable Nazjatar/Eternal Palace only special effects.</li>
+<li><strong>bfa.storm_of_the_eternal_ratio</strong> (scope global; default 0.05) Certain Storm of the Eternal effects grant crit/haste rating that is split between your raid. This option sets ratio of the total amount that will apply to you. Accepts values from 0.0 to 1.0.</li>
+<li><strong>bfa.font_of_power_precombat_channel</strong> (scope: global; default <em>disabled</em>) This option will set how many seconds before combat you will begin channeling the trinket Azshara’s Font of Power. If this option is left disabled (but the action is present in the precombat APL, e.g. <code dir="auto">actions.precombat+=/use_item,name=azsharas_font_of_power</code>), the trinket pre-channel timing will be adjusted to accomodate actions that follow it in the precombat APL.<br>
+For example, if you set <code dir="auto">bfa.font_of_power_precombat_channel=10</code> you will be considered to have begun channeling 10s before combat start, and will enter combat with a 24s buff, the trinket on 110s cooldown, and shared trinket cooldown of 10s. Accepts values from 0 to 34.</li>
+<li><strong>bfa.arcane_heart_hps</strong> (scope global; default 0) Sets the healing per second done on top of the sim damage. Note that not all healing in game is counted for this (E.g. leech). This healing would need to be deducted from the hps seen in game. Accepts any positive int value.</li>
+<li><strong>bfa.ripple_in_space_proc_chance</strong> (scope global; default 0) Sets the chance to proc the ripple in space minor. Chance is checked every second and cannot proc while on cooldown. Accepts values from 0.0 to 1.0.</li>
+</ul>
+<div class="sl-heading-wrapper level-h4"><h4 id="83---visions-of-nzoth--options">8.3 - Visions of N’Zoth  options</h4><a class="sl-anchor-link" href="#83---visions-of-nzoth--options"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “8.3 - Visions of N’Zoth  options”</span></a></div>
+<ul>
+<li><strong>bfa.voidtwisted_titanshard_percent_duration</strong> (scope global; default 0.5) How long the crit buff lasts (as a percentage). For example 1 provides full duration (15 seconds) and 0.5 would provide half duration (7.5 seconds)</li>
+<li><strong>bfa.surging_vitality_damage_taken_period</strong> (scope global; default 0) Sets how often to create a fake damage event to attempt to proc Surging Vitality.</li>
+<li><strong>bfa.manifesto_allies_start</strong> (scope global; default 0; max 12) Number of allies within 8 yards when the trinket is used (more allies = lower crit)</li>
+<li><strong>bfa.manifesto_allies_end</strong> (scope global; default 4; max 4) Number of allies within 5-20 yards(depending on cloak rank) when the first buff ends (more allies = more vers)</li>
+<li><strong>bfa.echoing_void_collapse_chance</strong> (scope global; default 0.15; max 1) Chance that the Echoing Void collapses on ability use which deals AOE damage.</li>
+<li><strong>bfa.void_ritual_increased_chance_active</strong> (scope global; default 0) Set to 1 to simulate the increased proc chance when allies are near you.</li>
+<li><strong>bfa.symbiotic_presence_interval</strong> (scope global; default 22) Approximate interval in seconds between raid member major essence uses that trigger Symbiotic Presence (The Formless Void).</li>
+<li><strong>bfa.whispered_truths_offensive_chance</strong> (scope global; default 0.75) Percentage of Whispered Truths reductions to be applied to offensive spells.</li>
+<li><strong>bfa.nyalotha</strong> (scope: global; default: 1) Specifies whether the players are in Ny’alotha, which is relevant for the Titanic Empowerment set bonus.</li>
+<li><strong>bfa.infinite_stars_miss_chance</strong> (scope global; default: 0.0) Chance to have an Infinite Stars proc miss (useful for single target sims)</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="azerite-essences">Azerite Essences</h3><a class="sl-anchor-link" href="#azerite-essences"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Azerite Essences”</span></a></div>
+<p>Battle for Azeroth introduced Azerite Essences as a different empowerment system to the necklace. Contrary to the Azerite Trait system of Head, Shoulders, and Chest these Essences consist of two separate effects. A major and a minor one. The necklace offers two types of slots. One Major slot, which activated the major <strong>and</strong> minor effect of the applied essence and 2 minor slots, which activate only the minor effects. Selection and replacement of the essences happens for free in any resting area. SimulationCraft offers the following additional option to add these effects to a profile.</p>
+<ul>
+<li><strong>azerite_essences</strong> (scope: character, default empty) Enables the provided azerite essences for that character (and any who inherits from it). format: <code dir="auto">token/token/token</code>. An example will be provided below.</li>
+</ul>
+<p>Token schemes:</p>
+<ul>
+<li><code dir="auto">essence_id:rank</code></li>
+<li><code dir="auto">essence_id:rank:type</code></li>
+<li><code dir="auto">spell_id</code></li>
+</ul>
+<p><code dir="auto">essence_id</code> can either be found in <code dir="auto">AzeriteEssence.db2</code> or uses the tokenized form of the essence name</p>
+<ul>
+<li><code dir="auto">rank</code>: 1…4</li>
+<li><code dir="auto">type</code>: 0 (minor) <strong>or</strong> 1 (major)</li>
+<li><code dir="auto">spell_id</code>: passive milestone spell id</li>
+</ul>
+<p>Only 2 or 3 element tokens for major/minor powers allowed. If 2 element tokens are used, the first element is the major essence, and the two subsequent tokens are the minor essences. In 3 element tokens, ordering does not matter. Placement of passive milestone spells is irrelevant.</p>
+<p><strong>Typical essence IDs</strong></p>
+<div class="expressive-code"><link rel="stylesheet" href="/simc/_astro/ec.w36nc.css"><script type="module" src="/simc/_astro/ec.0vx5m.js"></script><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">4    Worldvein</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">5    Focusing Iris</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">6    Purification Protocol</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">7    Anima of Life and Death</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">12   Crucible of Flames (Concentrated Flames)</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">14   Condensed Life-Force / Guardian of Azeroth</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">15   Ripple in Space</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">22   Vision of Perfection</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">23   Blood of the Enemy</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">27   Lucid Dreams</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">28   Unbound Force</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">32   Conflict and Strife</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">35   Breath of the Dying</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">36   Spark of Inspiration</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">37   The Formless Void</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="4    Worldvein5    Focusing Iris6    Purification Protocol7    Anima of Life and Death12   Crucible of Flames (Concentrated Flames)14   Condensed Life-Force / Guardian of Azeroth15   Ripple in Space22   Vision of Perfection23   Blood of the Enemy27   Lucid Dreams28   Unbound Force32   Conflict and Strife35   Breath of the Dying36   Spark of Inspiration37   The Formless Void"><div></div></button></div></figure></div>
+<p><strong>Examples</strong></p>
+<p>Enables Lucid Dreams major and minor effect.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">azerite_essences=27:3</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="azerite_essences=27:3"><div></div></button></div></figure></div>
+<p>Enables Crucible of Flames major and Ripple in Space minor.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">azerite_essences=12:3/15:3</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="azerite_essences=12:3/15:3"><div></div></button></div></figure></div>
+<p>Enables Crucible of Flames major and Ripple in Space minor but this time uses their type explicitly to order them freely.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">azerite_essences=ripple_in_space:3:0/crucible_of_flames:3:1</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="azerite_essences=ripple_in_space:3:0/crucible_of_flames:3:1"><div></div></button></div></figure></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="corruption">Corruption</h3><a class="sl-anchor-link" href="#corruption"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Corruption”</span></a></div>
+<p>Battle for Azeroth introduced gear corruption in patch 8.3. This system adds new affixes on gear, as well as two new substats: Corruption and Corruption Resistance.
+Non-azerite gear obtained in patch 8.3 from seasonal content can come with new powers on top of their regular stats. These bonuses are associated with a Corruption stat increase on the item. Players can remove (“cleanse”) the corruption effects from an item or chose to equip it and offset Corruption with Corruption Resistance, obtained from the new legendary cloak and new Azerite Essences.
+You can affect the corruption on a player with the following options:</p>
+<ul>
+<li><strong>gear_corruption</strong> and <strong>gear_corruption_resistance</strong> (scope: player) will override the total corruption and total corruption resistance from a profile’s gear.</li>
+<li><strong>enchant_corruption</strong> and <strong>enchant_corruption_resistance</strong> (scope: player) will add (or substract if provided a negative value) the amount specified to the profile’s current corruption or corruption resistance</li>
+<li><strong>enchant</strong> (scope: item) can be used in the same way as with regular stats to add a fake enchantment to an item, artificially increasing its Corruption or Corruption Resistance stat</li>
+</ul>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53"># Override the gear_corruption and gear_corruption_resistance to 30 to ensure that Heart of Darkness is always active</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">gear_corruption=30</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">gear_corruption_resistance=0</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53"># Add 30 corruption to a profile</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">enchant_corruption=30</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53"># Substract 50 corruption resistance from a profile</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">enchant_corruption_resistance=-50</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53"># Enchant an item with +15 corruption</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">wrists=dragonbone_vambraces,id=174170,bonus_id=4824/1517,enchant=15Cor</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="# Override the gear_corruption and gear_corruption_resistance to 30 to ensure that Heart of Darkness is always activegear_corruption=30gear_corruption_resistance=0# Add 30 corruption to a profileenchant_corruption=30# Substract 50 corruption resistance from a profileenchant_corruption_resistance=-50# Enchant an item with +15 corruptionwrists=dragonbone_vambraces,id=174170,bonus_id=4824/1517,enchant=15Cor"><div></div></button></div></figure></div>
+<div class="sl-heading-wrapper level-h2"><h2 id="legion">Legion</h2><a class="sl-anchor-link" href="#legion"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Legion”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="items">Items</h3><a class="sl-anchor-link" href="#items"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Items”</span></a></div>
+<p>Legion introduced several trinkets that require a separate option to control an aspect of the trinket simulation model.</p>
+<ul>
+<li><strong>legion.infernal_cinders_users</strong> (scope: global; default: 1; range: 1..20) The number of actors in the simulated raid environment wearing the Infernal Cinders trinket. <em>Note that Simulationcraft does not automatically infer the number of users from the raiding environment, it must be set with this option.</em></li>
+<li><strong>legion.engine_of_eradication_orbs</strong> (scope: global; default: 4; range: 0..4) The number of orbs each user of Engine of Eradication will pick up. Simulationcraft does not model any sort of movement-based picking up of the orbs.</li>
+<li><strong>legion.void_stalkers_contract_targets</strong> (scope: global; default: -1 [all targets]; range: 1..) Number of targets each Void Stalker’s Contract trinket pet hits.</li>
+<li><strong>legion.specter_of_betrayal_overlap</strong> (scope: global; default: 1.0; range: 0..1) Uniform probability of overlapping multiple Specter of Betrayal trinket effects. Conversely, at probability <code dir="auto">1 - legion.specter_of_betrayal_overlap</code> the simulator will only pulse the most recent Specter of Betrayal effect.</li>
+<li><strong>legion.cradle_of_anguish_resets</strong> (scope: global) Defines a list of time values delimited by <code dir="auto">,</code>, <code dir="auto">:</code>, or <code dir="auto">/</code> when the actor loses all stacks of Cradle of Anguish effect. This is intended to simulate the effect of the actor being below 50% health. <em>Note that the “must be over 80% health to gain stacks” is currently not modelled in Simulationcraft.</em></li>
+<li><strong>legion.archimondes_hatred_reborn_damage</strong> (scope: global; default 1.0; range: 0..1) Defines how much of the absorb shield provided by the legendary trinket Archimonde’s Hatred Reborn on use effect is consumed and turned into damage when it expires. <em>Simulationcraft doesn’t model damage taken by tanks in a realistic manner so the value is just set at 100% by default.</em></li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="miscellaneous">Miscellaneous</h3><a class="sl-anchor-link" href="#miscellaneous"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Miscellaneous”</span></a></div>
+<ul>
+<li><strong>legion.feast_as_dps</strong> (scope: global; default: true) Controls whether Lavish Suramar Feast is always treated as giving DPS stats (i.e., str, agi, or int), instead of a role-based behavior. With role-based behavior, the feast will grant stamina instead of primary stat for actors that have <code dir="auto">role=tank</code> defined.</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="pantheon-trinket-system">Pantheon trinket system</h3><a class="sl-anchor-link" href="#pantheon-trinket-system"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Pantheon trinket system”</span></a></div>
+<p>The empowered pantheon trigger system is modelled as a combination of proxy users based on user input and the items carried by actors defined in the simulation profile. Each “proxy user” represents another actor in the environment who owns the type of trinket specified and attempts to proc it. Internally, each proxy user is represented by a discrete real-ppm object to simulate the proxy user attempting to proc their representative trinket throughout combat.</p>
+<p>The current ruleset of the pantheon empowerment system (as of 2017-11-14) is as follows:</p>
+<ol>
+<li>Require a combination of at least 4 active base trinket buffs</li>
+<li>Treat Aman’Thul’s Vision as a “wildcard buff”, allowing each to count for 1.</li>
+<li>Treat any number of Aggramar’s Conviction, Golganneth’s Vitality, Eonar’s Compassion,
+Khazgoroth’s Courage, and Norgannon’s Prowess as a single buff; one buff of the given type
+will satisfy (a single) buff for the empowerment state check</li>
+<li>Once at least 4 base trinket buffs are up, trigger empowerment on all real actors who have
+buffs up. Note that this can result in more than 4 empowerment buffs to trigger (if multiples
+of the trinkets in 3. are up currently)</li>
+</ol>
+<div class="sl-heading-wrapper level-h4"><h4 id="options">Options</h4><a class="sl-anchor-link" href="#options"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Options”</span></a></div>
+<p>There are several sim-scope options that control the behaviour of the system.</p>
+<ul>
+<li><strong>legion.pantheon_trinket_interval</strong> (scope: global; default: 1) Sets the interval between attempts to proc the proxied pantheon base trinket buffs.</li>
+<li><strong>legion.pantheon_trinket_interval_stddev</strong> (scope: global; default: 0; range: 0..1) Sets the percentage amount of standard deviation from the mean in terms of <strong>legion.pantheon_trinket_interval</strong>.</li>
+<li><strong>legion.pantheon_trinket_users</strong> (scope: global) Creates proxy pantheon trinket users to the simulation environment. The format of the option is a ‘/’-delimited set of tokens of the form: <code dir="auto">&lt;type&gt;:&lt;haste%&gt;</code>, where <code dir="auto">&lt;type&gt;</code> is one of ‘am’, ‘go’, ‘kh’, ‘eo’, ‘no’, ‘ag’, for Aman’Thul’s Vision, Golganneth’s Vitality, Khaz’goroth’s Courage, Eonar’s Compassion, Norgannon’s Prowess, and Aggramar’s Conviction, respectively. The <code dir="auto">&lt;haste%&gt;</code> value is the paperdoll haste value of the proxy caster. Multiple values of the same trinket type can be defined (also with different haste% values). <em>Note that some of the trinkets do not scale with haste. The system will automatically ignore haste% values given for such trinkets (based on client data).</em></li>
+</ul>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">#Set up a 20 man proxy raid (19 additional users emulated) consisting of 9 Aman'Thul and 2 of each additional trinket</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">#20% character sheet haste is used for all relevant trinkets</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">legion.pantheon_trinket_users=am/am/am/am/am/am/am/am/am/go:0.2/go:0.2/kh/kh/eo:0.2/eo:0.2/no/no/ag/ag</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="#Set up a 20 man proxy raid (19 additional users emulated) consisting of 9 Aman&#x27;Thul and 2 of each additional trinket#20% character sheet haste is used for all relevant trinketslegion.pantheon_trinket_users=am/am/am/am/am/am/am/am/am/go:0.2/go:0.2/kh/kh/eo:0.2/eo:0.2/no/no/ag/ag"><div></div></button></div></figure></div>
+</div><footer class="sl-flex astro-idji2c3n"><div class="meta sl-flex astro-idji2c3n"></div><div class="pagination-links print:hidden astro-unfx7n6k" dir="ltr"><a href="/simc/reference/examples/" rel="prev" class="astro-unfx7n6k"><svg aria-hidden="true" class="astro-unfx7n6k astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span class="astro-unfx7n6k">Previous<br class="astro-unfx7n6k"><span class="link-title astro-unfx7n6k">Examples</span></span></a><a href="/simc/reference/options/" rel="next" class="astro-unfx7n6k"><svg aria-hidden="true" class="astro-unfx7n6k astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span class="astro-unfx7n6k">Next<br class="astro-unfx7n6k"><span class="link-title astro-unfx7n6k">Options</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>

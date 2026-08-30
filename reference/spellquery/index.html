@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-wy4c2mby"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Spell Query | SimulationCraft</title><link rel="canonical" href="https://topplethenun.github.io/simc/reference/spellquery/"/><link rel="sitemap" href="/simc/sitemap-index.xml"/><link rel="shortcut icon" href="/simc/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v7.2.9"/><meta name="generator" content="Starlight v0.41.10"/><meta property="og:title" content="Spell Query"/><meta property="og:type" content="article"/><meta property="og:url" content="https://topplethenun.github.io/simc/reference/spellquery/"/><meta property="og:locale" content="en"/><meta property="og:site_name" content="SimulationCraft"/><meta name="twitter:card" content="summary_large_image"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/simc/_astro/print.ehPL0gv-.css" media="print"><link rel="stylesheet" href="/simc/_astro/common.CR0JJupl.css"><script type="module" src="/simc/_astro/page.Dwipeu-R.js"></script></head><body class="astro-wy4c2mby"><a class="sl-skip-link astro-hnkoe7hg" href="#_top">Skip to content</a><div class="page sl-flex astro-hxzaxl2h"><header class="header astro-hxzaxl2h"><div class="header astro-e64bzlcb"><div class="title-wrapper sl-flex astro-e64bzlcb"><a href="/simc/" class="site-title sl-flex astro-iggt3new"><span class="astro-iggt3new" translate="no">SimulationCraft</span></a></div><div class="sl-flex print:hidden astro-e64bzlcb"><site-search class="astro-e64bzlcb astro-n5m6jpdh" data-translations="{&quot;placeholder&quot;:&quot;Search&quot;}"><button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-n5m6jpdh"><svg aria-hidden="true" class="astro-n5m6jpdh astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block astro-n5m6jpdh" aria-hidden="true">Search</span><kbd class="sl-hidden md:sl-flex astro-n5m6jpdh" style="display: none;"><kbd class="astro-n5m6jpdh">Ctrl</kbd><kbd class="astro-n5m6jpdh">K</kbd></kbd></button><dialog style="padding:0" aria-label="Search" class="astro-n5m6jpdh"><div class="dialog-frame sl-flex astro-n5m6jpdh"><button data-close-modal class="sl-flex md:sl-hidden astro-n5m6jpdh">Cancel</button><div class="search-container astro-n5m6jpdh"><div id="starlight__search" class="astro-n5m6jpdh"></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script><script type="module" src="/simc/_astro/Search.astro_astro_type_script_index_0_lang.BgEfGxOV.js"></script></div><div class="sl-hidden md:sl-flex print:hidden right-group astro-e64bzlcb"><div class="sl-flex social-icons astro-e64bzlcb"><a href="https://github.com/simulationcraft/simc" rel="me" class="sl-flex astro-gwnfudt3"><span class="sr-only astro-gwnfudt3">GitHub</span><svg aria-hidden="true" class="astro-gwnfudt3 astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-qvnrow5z"><span class="sr-only astro-qvnrow5z">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-qvnrow5z astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-qvnrow5z"><option value="dark" class="astro-qvnrow5z">Dark</option><option value="light" class="astro-qvnrow5z">Light</option><option value="auto" selected class="astro-qvnrow5z">Auto</option></select><svg aria-hidden="true" class="icon caret astro-qvnrow5z astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script><script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script><script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script></div></div></header><nav class="sidebar print:hidden astro-hxzaxl2h" aria-label="Main"><starlight-menu-button class="print:hidden astro-ehwglb7x"><button aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-ehwglb7x"><svg aria-hidden="true" class="open-menu astro-ehwglb7x astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg><svg aria-hidden="true" class="close-menu astro-ehwglb7x astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg></button></starlight-menu-button><script type="module">var e=class extends HTMLElement{btn=this.querySelector(`button`);constructor(){super(),this.btn.addEventListener(`click`,()=>this.toggleExpanded());let e=this.closest(`nav`);e&&e.addEventListener(`keyup`,e=>this.closeOnEscape(e)),matchMedia(`(min-width: 50em)`).addEventListener(`change`,()=>this.setExpanded(!1))}setExpanded(e){this.setAttribute(`aria-expanded`,String(e)),document.body.toggleAttribute(`data-mobile-menu-expanded`,e),document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}toggleExpanded(){this.setExpanded(this.getAttribute(`aria-expanded`)!==`true`)}closeOnEscape(e){e.code===`Escape`&&(this.setExpanded(!1),this.btn.focus())}};customElements.define(`starlight-menu-button`,e);</script><div id="starlight__sidebar" class="sidebar-pane astro-hxzaxl2h"><div class="sidebar-content sl-flex astro-hxzaxl2h"><sl-sidebar-state-persist data-hash="128pavv" class="astro-elzfs2db"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/" class="large astro-5wcgfqeq"><span class="astro-5wcgfqeq">Start Here</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/features" class="large astro-5wcgfqeq"><span class="astro-5wcgfqeq">Features</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/common-issues" class="large astro-5wcgfqeq"><span class="astro-5wcgfqeq">Common Issues</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/faq" class="large astro-5wcgfqeq"><span class="astro-5wcgfqeq">Frequently Asked Questions</span></a></li><li class="astro-5wcgfqeq"><details open class="astro-5wcgfqeq"><summary class="astro-5wcgfqeq"><span class="group-label astro-5wcgfqeq"><span class="large astro-5wcgfqeq">Classes</span></span><svg aria-hidden="true" class="caret astro-5wcgfqeq astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul class="astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/classes/deathknights/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Death Knights</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/demonhunters/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Demon Hunters</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/druids/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Druids</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/evokers/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Evokers</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/hunters/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Hunters</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/mages/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Mages</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/monks/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Monks</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/paladins/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Paladins</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/priests/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Priests</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/rogues/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Rogues</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/shaman/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Shaman</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/warlocks/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Warlocks</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/classes/warriors/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Warriors</span></a></li></ul></details></li><li class="astro-5wcgfqeq"><details open class="astro-5wcgfqeq"><summary class="astro-5wcgfqeq"><span class="group-label astro-5wcgfqeq"><span class="large astro-5wcgfqeq">Textual Configuration Interface</span></span><svg aria-hidden="true" class="caret astro-5wcgfqeq astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul class="astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/reference/action-list-conditional-expressions/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Action List Conditional Expressions</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/actionlists/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Action Lists</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/battlearmoryapi/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Battle Armory API</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/buffsanddebuffs/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Buffs and Debuffs</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/characters/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Characters</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/enemies/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Enemies</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/equipment/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Equipment</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/examples/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Examples</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/expansionoptions/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Expansion Options</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/options/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Options</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/output/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Output</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/profileset/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Profile Set</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/raidevents/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Raid Events</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/spelldata/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Spell Data</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/spellquery/" aria-current="page" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Spell Query</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/statisticalbehaviour/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Statistical Behaviour</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/statsscaling/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Stats Scaling</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/targetoptions/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Target Options</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/textualconfigurationinterface/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Textual Configuration Interface</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/reference/unique-gear-actions/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Unique Gear Actions</span></a></li></ul></details></li><li class="astro-5wcgfqeq"><details open class="astro-5wcgfqeq"><summary class="astro-5wcgfqeq"><span class="group-label astro-5wcgfqeq"><span class="large astro-5wcgfqeq">Developer Corner</span></span><svg aria-hidden="true" class="caret astro-5wcgfqeq astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="2"></sl-sidebar-restore><ul class="astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/development/coded_flags/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Coded Flags</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/codingguidelines/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Coding Guidelines</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/developersdocumentation/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Developers Documentation</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/gameclientdata/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Game Client Data</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/how-to-debug/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">How to Debug</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/howtobuild/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">How to Build</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/localization/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Localization</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/participate/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Participate</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/development/using-casc-extract-and-dbc-extract/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Using CASC Extract and DBC Extract</span></a></li></ul></details></li><li class="astro-5wcgfqeq"><details open class="astro-5wcgfqeq"><summary class="astro-5wcgfqeq"><span class="group-label astro-5wcgfqeq"><span class="large astro-5wcgfqeq">Appendixes</span></span><svg aria-hidden="true" class="caret astro-5wcgfqeq astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="3"></sl-sidebar-restore><ul class="astro-5wcgfqeq"><li class="astro-5wcgfqeq"><a href="/simc/appendixes/cachecontrol/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Cache Control</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/fightingvariance/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Fighting Variance</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/formulationvssimulation/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Formulation vs Simulation</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/logos/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Logos</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/premedititatedprovocation/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">Premeditated Provocation</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/simc_guisimc/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">simc_gui.simc</span></a></li><li class="astro-5wcgfqeq"><a href="/simc/appendixes/simcfortanks/" class="astro-5wcgfqeq"><span class="astro-5wcgfqeq">simc for Tanks</span></a></li></ul></details></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex astro-3ha22r7x"><div class="social-icons astro-3ha22r7x"><a href="https://github.com/simulationcraft/simc" rel="me" class="sl-flex astro-gwnfudt3"><span class="sr-only astro-gwnfudt3">GitHub</span><svg aria-hidden="true" class="astro-gwnfudt3 astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-qvnrow5z"><span class="sr-only astro-qvnrow5z">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-qvnrow5z astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-qvnrow5z"><option value="dark" class="astro-qvnrow5z">Dark</option><option value="light" class="astro-qvnrow5z">Light</option><option value="auto" selected class="astro-qvnrow5z">Auto</option></select><svg aria-hidden="true" class="icon caret astro-qvnrow5z astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script></div></div></div></div></nav><div class="main-frame astro-hxzaxl2h"><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex astro-7fdbht2j"><aside class="right-sidebar-container print:hidden astro-7fdbht2j"><div class="right-sidebar astro-7fdbht2j"><div class="lg:sl-hidden astro-zrccc5ae"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-tqrbh7yd"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-tqrbh7yd"><details id="starlight__mobile-toc" class="astro-tqrbh7yd"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-tqrbh7yd"><span class="toggle sl-flex astro-tqrbh7yd">On this page<svg aria-hidden="true" class="caret astro-tqrbh7yd astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-tqrbh7yd"></span></summary><div class="dropdown astro-tqrbh7yd"><ul class="isMobile astro-hpfmcegt" style="--depth: 0;"><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#_top" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Overview</span></a></li></ul></div></details></nav></mobile-starlight-toc><script type="module" src="/simc/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.BcSo_yiZ.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-zrccc5ae"><div class="sl-container astro-zrccc5ae"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-hpfmcegt" style="--depth: 0;"><li style="--depth: 0;" class="astro-hpfmcegt"><a href="#_top" style="--depth: 0;" class="astro-hpfmcegt"><span style="--depth: 0;" class="astro-hpfmcegt">Overview</span></a></li></ul></nav></starlight-toc><script type="module" src="/simc/_astro/TableOfContents.astro_astro_type_script_index_0_lang.Csloo1VZ.js"></script></div></div></div></aside><div class="main-pane astro-7fdbht2j"><main data-pagefind-body class="astro-wy4c2mby" lang="en" dir="ltr"><div class="content-panel astro-hhd3jgjl"><div class="sl-container astro-hhd3jgjl"><h1 id="_top" class="astro-dtr4knek">Spell Query</h1></div></div><div class="content-panel astro-hhd3jgjl"><div class="sl-container astro-hhd3jgjl"><div class="sl-markdown-content"><p><em>This documentation is a part of the <a href="TextualConfigurationInterface.md">TCI</a> reference.</em></p>
+<p>Spell data searches can now be done by using the “spell_query” option in
+simc. This does not do any simulation, but rather reads the expression given as
+a value for the option, and runs it against the spell (or talent) data for live or PTR (by specifying ptr=1 before the spell_query option). The result is a textual output of all spells (or talents) matching the given query expression. You can also append “@<strong>level</strong>” at the end of your spell query, which will execute the query using an actor level that was specified at <strong>level</strong>. In addition, from version 623-1 forward you can also specify the item level through the <strong>level</strong> option. Spell query will interpret any level higher than the global player maximum level of the simulator to indicate item level scaling for the spell.</p>
+<p>To accomplish this, a new expression data type has been defined
+(TOK_SPELL_LIST), which contains a list of spell or talent identifiers. To this
+end, spell_query works on an expression level by first taking a full list of
+spell ids, and performing filtering on that list to limit it. Thus, all
+spell_query related operations are binary, and the left side operator must
+always be a TOK_SPELL_LIST operand. Binary operators may be chained normally,
+as the binary operator inherits both data source and the result type from the
+left side operator.</p>
+<p>The expressions for spell query follow the normal simc expression input,
+however the spell query must be told where to get the initial list of
+identifiers. The following identifier data sources have been defined:</p>
+<ul>
+<li>spell - The master spell list, containing all spell data in simc</li>
+<li>talent - The master talent list, containing all talent data (NOTE: not spells)</li>
+<li>talent_spell - All spell ids used by the master talent list for talent ranks</li>
+<li>class_spell - All spells belonging to a class and “clickable”, this includes pets</li>
+<li>race_spell - All racial spells</li>
+<li>mastery - All class masteries</li>
+<li>spec_spell - All specialization spells, passive or active</li>
+<li>glyph - All glyph spells</li>
+<li>set_bonus - All set bonus spells</li>
+<li>effect - All effects</li>
+<li>perk_spell - All perk spells (NOTE: WoD only)</li>
+<li>artifact - All artifact spells (<strong>Added in version 703-1, Removed in 8.0</strong>)</li>
+<li>azerite - All azerite power spells (<strong>Added in version 8.0</strong>)</li>
+<li>covenant_spell - All Covenant abilities (<strong>Added in version 9.0.1, release 1</strong>)</li>
+<li>soulbind_spell - All Soulbind abilities (<strong>Added in version 9.0.1, release 1</strong>)</li>
+<li>conduit_spell - All Soulbind conduit abilities (<strong>Added in version 9.0.1, release 1</strong>)</li>
+<li>runeforge_spell - All runeforge legendary spells (<strong>Added in version 9.0.2, release 1</strong>)</li>
+</ul>
+<p>A data source can be filtered by giving it a data field name, by suffixing the
+data source name with a period and the filtering data field name. Currently the
+system does not support deeper “paths” than 2, i.e. “spell.name” is the deepest
+it will go. The expression is then given an operand, e.g. == !=, &lt;, &gt; and so
+on, after which a string, numeric type or another spell identifier list (if the
+operands &amp;, | or - are used). The following data field names are currently
+supported, listing the name, data_source_types (spell covers all but “talent”
+data source), operand_type and a brief description:</p>
+<ul>
+<li>name, spell/talent, STRING</li>
+<li>id, spell/talent, NUMBER</li>
+<li>flags, spell/talent, NUMBER (not used for anything currently)</li>
+<li>speed, spell, NUMBER (projectile speed)</li>
+<li>school, spell, STRING (spell school name)</li>
+<li>class, spell/talent, STRING (class name)</li>
+<li>pet_class, talent, STRING (pet talent tree name)</li>
+<li>scaling, spell, NUMBER (spell scaling type, -1 for “generic scaling”, 0 for no scaling, otherwise class number)</li>
+<li>extra_coeff, spell, NUMBER (spell-wide coefficient, usually used for spells scaling with both SP and AP)</li>
+<li>level, spell, NUMBER (spell learned level)</li>
+<li>max_level, spell, NUMBER (spell “maximum” level in a scaling sense)</li>
+<li>min_range, spell, NUMBER (minimum range in yards)</li>
+<li>max_range, spell, NUMBER (maximum range in yards)</li>
+<li>cooldown, spell, NUMBER (spell cooldown, in milliseconds)</li>
+<li>gcd, spell, NUMBER (spell gcd duration, in milliseconds)</li>
+<li>category_cooldown, spell, NUMBER (shared cooldown duration, in milliseconds, <strong>New in version 710-03</strong>)</li>
+<li>charges, spell, NUMBER (number of charges for the spell)</li>
+<li>charge_cooldown, spell, NUMBER (charge cooldown in milliseconds)</li>
+<li>category, spell, NUMBER (spell cooldown category)</li>
+<li>duration, spell, NUMBER (spell duration in milliseconds)</li>
+<li>rune, spell, STRING, (b = blood, f = frost, u = unholy, will match minimum rune requirement, <strong>Removed in version 701-1</strong>)</li>
+<li>power_gain, spell, NUMBER (amount of runic power gained, <strong>Removed in version 701-1</strong>)</li>
+<li>max_stack, spell, NUMBER (maximum stack of spell)</li>
+<li>proc_chance, spell, NUMBER (spell proc chance in percent (0..100))</li>
+<li>icd, spell, NUMBER (internal cooldown of a spell in milliseconds)</li>
+<li>initial_stack, spell, NUMBER (initial amount of stacks)</li>
+<li>cast_min, spell, NUMBER (minimum cast time in milliseconds)</li>
+<li>cast_max, spell, NUMBER (maximum cast time in milliseconds)</li>
+<li>cast_div, spell, NUMBER (scaling divisor for cast time, always 20)</li>
+<li>m_scaling, spell, NUMBER (unknown scaling multiplier)</li>
+<li>attribute, spell, NUMBER (spell attribute bit index, 0 indexed)</li>
+<li>flag, spell, NUMBER (spell family flag bit index, 0 indexed, <strong>Added in version 801-1</strong>)</li>
+<li>label, spell, NUMBER (spell label number, <strong>Added in version 905-1</strong> )</li>
+<li>scaling_level, spell, NUMBER (level threshold for m_scaling)</li>
+<li>desc, spell, STRING (spell description)</li>
+<li>tooltip, spell, STRING (spell tooltip)</li>
+<li>stance_mask, spell, NUMBER (stance mask of the spell, <strong>Added in version 701-1</strong>)</li>
+<li>tab, talent, NUMBER (talent tab number, 0..2)</li>
+<li>dependence, talent, NUMBER (talent id this talent depends on)</li>
+<li>depend_rank, talent, NUMBER (talent rank of talent id this talent depends on)</li>
+<li>col, talent, NUMBER (talent column 0..3)</li>
+<li>row, talent, NUMBER (talent “tier” 0..6)</li>
+<li>power_id, spell/azerite, NUMBER (azerite armor trait id, <strong>Added in version 8.0</strong>)</li>
+<li>essence_id, spell, NUMBER (heart of azeroth essence id, <strong>Added in version 8.2</strong>)</li>
+<li>covenant, spell, STRING (covenant name in lowercase, <strong>Added in version 9.0.1 release 1</strong>)</li>
+<li>conduit_id, spell, NUMBER (conduit identifier, <strong>Added in version 9.0.1 release 1</strong>)</li>
+</ul>
+<p>For numeric data fields, the following numeric operators between a spell list
+and a numeric right-side operand are available: ==, !=, &gt;, &lt;, &gt;=, &lt;=. All string data
+fields can be filtered by a string right-side operand and the following operators:</p>
+<ul>
+<li>== : case insensitive string equality</li>
+<li>!= : case insensitive string inequality</li>
+<li>~  : case insensitive substring in data field</li>
+<li>!~ : case insensitive substring not in data field</li>
+</ul>
+<p>IMPORTANT NOTE Due to how simc does command line parsing, all string based
+filtering needs to be input with whitespaces converted to underscores and without any
+special characters. The spell filtering will automatically “canonicalize” any
+strings it compares your textual input against, and all comparisons are done
+case insensitive. This means that for example “Shadow Word: Pain” becomes
+“Shadow_Word_Pain” when given as a right-side string operand to filter with
+IMPORTANT NOTE</p>
+<p>Furthermore, for identifier list operands on the right side of the expression, the
+following operators are available:</p>
+<ul>
+<li>&amp;  : intersection (identifiers in both left and right side)</li>
+<li>|  : union (identifiers from both left and right side, removing duplicates)</li>
+<li>
+<ul>
+<li>: subtraction (right side identifiers removed from left side list of identifiers)</li>
+</ul>
+</li>
+</ul>
+<p>Examples:</p>
+<p>a) All activatable class spells of shaman</p>
+<blockquote>
+<p>$ simc spell_query=class_spell.class=shaman</p>
+</blockquote>
+<p>b) All cataclysm activatable spells</p>
+<blockquote>
+<p>$ simc spell_query=“class_spell.level&gt;80”</p>
+</blockquote>
+<p>c) All activatable class spells of shaman and priest</p>
+<blockquote>
+<p>$ simc spell_query=“class_spell.class=shaman|class_spell.class=priest”</p>
+</blockquote>
+<p>c) All mastery spells</p>
+<blockquote>
+<p>$ simc spell_query=mastery</p>
+</blockquote>
+<p>d) All class (and pet) spells costing resources</p>
+<blockquote>
+<p>$ simc spell_query=“class_spell.cost&gt;0”</p>
+</blockquote>
+<p>e) All spells that contain “shadow damage” in their description or tooltip</p>
+<blockquote>
+<p>$ simc spell_query=“spell.desc<del>shadow_damage|spell.tooltip</del>shadow_damage”</p>
+</blockquote>
+<p>f) All death knight spells that use at minimum a blood and an unholy rune</p>
+<blockquote>
+<p>$ simc spell_query=“spell.class=death_knight&amp;spell.rune=bu”</p>
+</blockquote>
+<p>g) All spells using the constant scaling</p>
+<blockquote>
+<p>$ simc spell_query=spell.scaling=-1</p>
+</blockquote>
+<p>h) All spells that are fire or frost based (including derivations)</p>
+<blockquote>
+<p>$ simc spell_query=“spell.school=fire|spell.school=frost”</p>
+</blockquote>
+<p>Note that depending on your shell interpreter, you may need to escape some special
+characters used in the spell queries.</p>
+<p>………………………………………………………………………………</p>
+<p>A new data source called “effect” allows for filtering effects based on data
+field, currently all data fields accept a numeric operand to compare against.
+Additionally, spells can now be filtered by using “effect” as a field name,
+followed by one of the actual data field names:</p>
+<ul>
+<li>id - Effect id</li>
+<li>flags - Effect flags (not used for anything)</li>
+<li>spell_id - Spell the effect belongs to</li>
+<li>index - Effect index on the spell (effect indexes in data are 0..2)</li>
+<li>type - Effect type (see data_enums.hh for effect_type_t)</li>
+<li>sub_type - Effect (aura) sub type (see data_enums.hh for effect_subtype_t)</li>
+<li>m_coefficient - Effect average scaling multiplier (class-based scaling)</li>
+<li>m_delta - Effect delta scaling multiplier (class-based scaling)</li>
+<li>m_bonus - Effect bonus scaling multiplier (class-based scaling)</li>
+<li>coefficient - Effect coefficient</li>
+<li>amplitude - Effect amplitude (base tick time)</li>
+<li>radius - Effect minimum radius</li>
+<li>max_radius - Effect maximum radius</li>
+<li>base_value - Effect base value</li>
+<li>misc_value - Effect miscellaneous value</li>
+<li>misc_value2 - Effect secondary miscellaneous value</li>
+<li>trigger_spell - A spell (identifier) that is triggered by this effect</li>
+<li>m_chain - Effect chain multiplier</li>
+<li>p_combo_points - Effect combo point based multiplier (usage unknown at the moment)</li>
+<li>p_level - Effect level based multiplier</li>
+<li>damage_range - Effect damage range modifier (usage unknown at the moment)</li>
+<li>chain_target - Number of targets the effect chains to</li>
+<li>target_1 - First targeting type identifier (<strong>Added in version 703-1</strong>)</li>
+<li>target_2 - Second targeting type identifier (<strong>Added in version 703-1</strong>)</li>
+</ul>
+<p>An example:</p>
+<p>a) All shaman talents that additively increase the critical strike bonus of spells</p>
+<blockquote>
+<p>$ ./simc spell_query=“talent_spell.class=shaman&amp;talent_spell.effect.sub_type=108&amp;talent_spell.effect.misc_value=15”</p>
+</blockquote>
+<p>………………………………………………………………………………</p>
+<p>When using the spell_query_xml_output_file option, the output will be stored into the chosen file and formated as XML.</p>
+</div><footer class="sl-flex astro-idji2c3n"><div class="meta sl-flex astro-idji2c3n"></div><div class="pagination-links print:hidden astro-unfx7n6k" dir="ltr"><a href="/simc/reference/spelldata/" rel="prev" class="astro-unfx7n6k"><svg aria-hidden="true" class="astro-unfx7n6k astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span class="astro-unfx7n6k">Previous<br class="astro-unfx7n6k"><span class="link-title astro-unfx7n6k">Spell Data</span></span></a><a href="/simc/reference/statisticalbehaviour/" rel="next" class="astro-unfx7n6k"><svg aria-hidden="true" class="astro-unfx7n6k astro-5y62s7vq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span class="astro-unfx7n6k">Next<br class="astro-unfx7n6k"><span class="link-title astro-unfx7n6k">Statistical Behaviour</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
